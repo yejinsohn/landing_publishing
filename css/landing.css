@@ -43,7 +43,7 @@ html, body {
 	border-radius: 50px;
 	position: absolute;
 	top: 3px;
-	background: #99a1a7;
+	background: #00a1b7;
 	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 	text-shadow: 0px;
 	left: 3px;
@@ -51,7 +51,7 @@ html, body {
 }
 .radio:checked + label {
 	background-color: #e9ecee;
-	color: #99a1a7;
+	color: #00a1b7;
 	border: 1px solid #adb8c0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
 }
@@ -68,6 +68,9 @@ html, body {
 	height: 24px;
 	left: 4px;
 	top: 4px;
+}
+.radio-style {
+	line-height: 150%;
 }
 
 /* check box */
@@ -93,7 +96,7 @@ label {
 	background-color: #e9ecee;
 	border: 1px solid #adb8c0;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-	color: #99a1a7;
+	color: #00a1b7
 }
 .checkbox:checked + label:after {
 	content: '\2714';
@@ -101,17 +104,22 @@ label {
 	position: absolute;
 	top: 0px;
 	left: 3px;
-	color: #99a1a7;
+	color: #00a1b7
 }
 .big-checkbox + label {
 	padding: 18px;
     margin-right: 10px;
-    vertical-align: middle; 
+	margin-bottom: 10px;
+	vertical-align: middle; 
 }
 .big-checkbox:checked + label:after {
 	font-size: 28px;
 	left: 6px;
 }
+.checkbox-style {
+	font-size: 20px;
+}
+
 .end{
     border-bottom: 5px solid #ddd;
     padding-top: 10px;
@@ -176,22 +184,22 @@ label {
 input:focus {
     outline:none;
 }
-.color-ex {
+#step1 .color-ex {
 	color: red;
 	font-weight: bold;
 }
-.input-color {
+#step1 .input-color {
     width: 100%;
     height: auto;
     display: flex;
 }
-.color-box {
+#step1 .color-box {
     width: 80px;
     height: 80px;
     float: left;
     margin-right: 10px;
 }
-.color-plus {
+#step1 .color-plus {
     width: 77px;
     height: 77px;
     float: left;
@@ -202,7 +210,67 @@ input:focus {
 }
 /* step2 */
 /* step3 */
+#step3 .step3-page1 {
+	display: flex;
+}
+#step3 .dafault {
+	width: 30%;
+	margin-left: 15%;
+}
+#step3 ol {
+	width: 100%;
+    list-style-position: outside;
+    padding-left: 10px;
+	margin-left: 10%;
+	font-size: 20px;
+	line-height: 200%;
+}
+#step3 .optional { 
+	width: 60%;
+	margin-left: 15%;	
+}
+#step3 .const-item {
+	font-size: 20px;
+	font-weight: bold;
+}
+#step3 .const-input-box {
+	font-size: 20px;
+	width: 500px;
+    height: 30px;
+    border : 1px solid #232323;
+	font-size: 20px;
+}
+#step3 .comment {
+	font-weight: bold;
+	color: #f83131;
+}
+
 /* step4 */
+#step4 .font-select {
+	display: flex;
+}
+#step4 .font-radio-style {
+	width: 30%;
+	font-size: 20px;
+	line-height: 300%;
+	margin-left: 15%;
+}
+#step4 .font-input-box {
+	width: 80px;
+    height: 30px;
+    border : 1px solid #232323;
+	font-size: 20px;
+}
+#step4 .font-div {
+	font-size: 30px;
+	margin: 50px;
+}
+#step4 .font-ex {
+	display: inline-block;
+	margin-bottom: 10px;
+	color: white;
+	background-color: #00a1b7;
+}
 
 /* step5 */
 #step5 .sticky-checkbox {
@@ -210,7 +278,6 @@ input:focus {
     align-items: flex-start;
 	margin-bottom: 30px;
 }
-
 #step5 .sticky {
 	margin-left: 10%;
     max-width: 70%;

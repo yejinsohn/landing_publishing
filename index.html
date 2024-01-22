@@ -20,7 +20,7 @@
         <div class="menu-box">
             <div class="menu-top"></div>
             <div class="menu-text">
-                <p class="menu click">Step 1. 브랜드 이미지</p>
+                <p class="menu">Step 1. 브랜드 이미지</p>
                 <p class="menu">▶ Step 2. 메인 화면 선택</p>
                 <p class="menu">▶ Step 3. 구성 선택</p>
                 <p class="menu">▶ Step 4. 강조 폰트 선택</p>
@@ -87,14 +87,41 @@
                 </div>
             </div>
             <!-- Step3. 구성 선택 -->
-            <div class="menu-area" style="display: none;">
+            <div class="menu-area" style="display: block;">
                 <p class="intro">
                     랜딩페이지에 삽입하고 싶은 영역들을 선택하고<br>
                     디자인을 고를 수 있습니다.
                 </p>
                 <p class="end"></p>
                 <div class="menu-step" id="step3">
-                    구성 선택
+                    <div class="step3-page1">
+                        <div class="default">
+                            <p class="const-item">기본 사항</p>
+                            <ol>
+                                <li>특징</li>
+                                <li>영수증</li>
+                                <li>메뉴 소개</li>
+                                <li>인테리어</li>
+                                <li>후기</li>
+                                <li>상담 신청 폼</li>
+                                <li>가맹절차</li>
+                            </ol>
+                        </div>
+                        <div class="optional">
+                            <p class="const-item">선택 사항 (중복 선택 가능)</p>
+                            <div class="checkbox-style">
+                                <input type="checkbox" id="checkbox-2-1" class="checkbox big-checkbox" value="매출 그래프" onchange=""/><label for="checkbox-2-1"></label>매출 그래프<br/> 
+                                <input type="checkbox" id="checkbox-2-2" class="checkbox big-checkbox" value="유튜브 영상" onchange=""/><label for="checkbox-2-2"></label>유튜브 영상<br/>
+                                <input type="checkbox" id="checkbox-2-3" class="checkbox big-checkbox"value="인스타그램 이미지" onchange=""/><label for="checkbox-2-3"></label>인스타그램 이미지<br/>
+                                <input type="checkbox" id="checkbox-2-4" class="checkbox big-checkbox" value="브랜드 소개" onchange=""/><label for="checkbox-2-4"></label>브랜드 소개<br/>
+                                <input type="checkbox" id="checkbox-2-5" class="checkbox big-checkbox" value="창업 비용" onchange=""/><label for="checkbox-2-5"></label>창업비용<br/>
+                                <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="직접입력" onchange=""/><label for="checkbox-2-6"></label>
+                                <input class="const-input-box" type="text" placeholder="직접입력";><br/>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment">* 선택하신 브랜드 이미지/내용/컬러를 참고하여 전문가가 영역 순서를 배치합니다.</p>
+                    <div class="step3-page2"></div>
 
                     <div class="btn">
                         <span class="pre-btn" onclick="prev(2)">이전</span>
@@ -107,8 +134,54 @@
                 <p class="intro"></p>
                 <p class="end"></p>
                 <div class="menu-step" id="step4">
-                    강조 폰트 선택
-
+                    <div class="font-select">
+                        <div class="font-radio-style">
+                            <input type="radio" id="radio-4-1" name="font-radio" class="radio big-radio" value="전통적인" onchange="shoFontDiv()"/><label for="radio-4-1"></label>전통적인<br/> 
+                            <input type="radio" id="radio-4-2" name="font-radio" class="radio big-radio" value="딱딱한" onchange="shoFontDiv()"/><label for="radio-4-2"></label>딱딱한<br/>
+                            <input type="radio" id="radio-4-3" name="font-radio" class="radio big-radio" value="둥글둥글한" onchange="shoFontDiv()"/><label for="radio-4-3"></label>둥글둥글한<br/>
+                            <input type="radio" id="radio-4-4" name="font-radio" class="radio big-radio" value="견고한" onchange="shoFontDiv()"/><label for="radio-4-4"></label>견고한<br/>
+                            <input type="radio" id="radio-4-5" name="font-radio" class="radio big-radio" value="친근한" onchange="shoFontDiv()"/><label for="radio-4-5"></label>친근한<br/>
+                            <input type="radio" id="radio-4-6" name="font-radio" class="radio big-radio" value="직접입력" onchange="shoFontDiv()"/><label for="radio-4-6"></label>
+                                <input class="font-input-box" type="text" placeholder="직접입력";><br/>
+                        </div>
+                        <div>
+                            <div class="font-div" id="div-radio-4-1" style="display: none;">
+                                <div class="font-ex">폰트 예시</div>
+                                <div>
+                                    전통적인 폰트입니다.<br>
+                                    <p class="basic-text">* 이 폰트는 어디에 어울리고, 어떤 느낌을 강조하게 됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="font-div" id="div-radio-4-2" style="display: none;">
+                                <div class="font-ex">폰트 예시</div>
+                                <div>
+                                    딱딱한 폰트입니다.<br>
+                                    <p class="basic-text">* 이 폰트는 어디에 어울리고, 어떤 느낌을 강조하게 됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="font-div" id="div-radio-4-3" style="display: none;">
+                                <div class="font-ex">폰트 예시</div>
+                                <div>
+                                    둥글둥글한 폰트입니다.<br>
+                                    <p class="basic-text">* 이 폰트는 어디에 어울리고, 어떤 느낌을 강조하게 됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="font-div" id="div-radio-4-4" style="display: none;">
+                                <div class="font-ex">폰트 예시</div>
+                                <div>
+                                    견고한 폰트입니다.<br>
+                                    <p class="basic-text">* 이 폰트는 어디에 어울리고, 어떤 느낌을 강조하게 됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="font-div" id="div-radio-4-5" style="display: none;">
+                                <div class="font-ex">폰트 예시</div>
+                                <div>
+                                    친근한 폰트입니다.<br>
+                                    <p class="basic-text">* 이 폰트는 어디에 어울리고, 어떤 느낌을 강조하게 됩니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="btn">
                         <span class="pre-btn" onclick="prev(3)">이전</span>
                         <span class="next-btn" onclick="next(3)">다음</span>
@@ -116,7 +189,7 @@
                 </div>
             </div>
             <!-- Step5. 스티키 메뉴 추가 여부 -->
-            <div class="menu-area" style="display: block;">
+            <div class="menu-area" style="display: none;">
                 <p class="intro">
                     스티키 메뉴란 사이트를 아래로 스크롤해도<br>
                     고정으로 표시되는 메뉴를 뜻합니다.

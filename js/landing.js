@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 });
 
+// button 
 function next(idx){
     $(".form-box .menu-area").hide();
     $(".form-box .menu-area").eq(idx + 1).show();
@@ -30,7 +31,7 @@ function prev(idx){
     $(".menu-box .menu").eq(idx - 1).addClass("click");
 }
 
-// 컬러톤 추가
+// Step1 컬러톤 추가
 function setColorBox() {
     var colorBox2 = $('#color-box-2');
     var colorBox3 = $('#color-box-3');
@@ -42,4 +43,11 @@ function setColorBox() {
         colorBox3.show();
         setcolor.hide();
     }
+}
+
+// Step4 폰트 예시
+function shoFontDiv() {
+    var selectedRadioId = $('input[name="font-radio"]:checked').attr('id');
+    $('.font-div').hide();
+    $('#div-' + selectedRadioId).show();
 }
