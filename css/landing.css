@@ -118,3 +118,23 @@ label {
     padding-top: 10px;
     clear: both;
 }
+
+.menu-box .menu-text {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #656565;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.menu-box .menu-text .click{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #319ff8;
+    flex-wrap: wrap;
+}
