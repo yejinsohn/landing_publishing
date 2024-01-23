@@ -1,0 +1,303 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+.header {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 30px;
+    padding: 25px;
+    text-align: center;
+}
+.menu-top {
+    width: 100%;
+    height: 30px;
+    background-color: #9d9fa1;
+}
+.menu-text {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* Radio */
+.radio {
+	display: none;
+}
+.radio + label {
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+.radio:checked + label:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #99a1a7;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+.radio:checked + label {
+	background-color: #e9ecee;
+	color: #99a1a7;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+.radio + label:active, .radio:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.big-radio + label {
+	padding: 16px;
+    margin: 5px;
+    vertical-align: middle; 
+}
+.big-radio:checked + label:after {
+	width: 24px;
+	height: 24px;
+	left: 4px;
+	top: 4px;
+}
+
+/* check box */
+label {
+	display: inline;
+}
+.checkbox {
+	display: none;
+}
+.checkbox + label {
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+.checkbox + label:active, .checkbox:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.checkbox:checked + label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+.checkbox:checked + label:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+}
+.big-checkbox + label {
+	padding: 18px;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+.big-checkbox:checked + label:after {
+	font-size: 28px;
+	left: 6px;
+}
+.end{
+    border-bottom: 5px solid #ddd;
+    padding-top: 10px;
+	margin-bottom: 30px;
+    clear: both;
+}
+
+/* menu-box */
+.menu-box .menu-text {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: #656565;
+    width: 100%;
+	margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.menu-box .menu-text .click{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #f83131;
+    flex-wrap: wrap;
+}
+
+/* form-box */
+.form-box .menu-step {
+ 	width: 90%;
+ 	margin: 0 auto;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+	font-weight: normal;
+	font-size: 16px;
+}
+.form-box .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 20px;
+    color: #444444;
+    text-align: center;
+	margin: 20px;
+}
+.form-box .menu-step .select {
+    margin-bottom: 30px;
+}
+.form-box .menu-step .select-item {
+   font-weight: bold;
+}
+
+/* step1 */
+.input-box {
+    width: 500px;
+    height: 30px;
+    border : 2px solid #232323;
+}
+input:focus {
+    outline:none;
+}
+.color-ex {
+	color: red;
+	font-weight: bold;
+}
+.input-color {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.color-box {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+}
+.color-plus {
+    width: 77px;
+    height: 77px;
+    float: left;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+    border: 1px dashed rgb(158, 156, 156);
+    cursor: pointer;
+}
+/* step2 */
+.main-div .main-div-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-div .main-div-button {
+    background-color: #000000;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.main-div .main-div-content .basic-text{
+    max-width: 40%;
+}
+
+.main-div .main-div-img {
+    max-width: 60%;
+    display: flex;
+}
+
+.main-div .main-div-img img {
+    /* width: 200px; */
+    max-width: 100%;
+}
+
+.main-div .main-div-img .basic {
+    max-width: 60%;
+}
+
+.main-div .main-div-img .mobile {
+    max-width: 40%;
+    width: 200px;
+}
+
+/* step3 */
+/* step4 */
+
+/* step5 */
+#step5 .sticky-checkbox {
+    display: flex;
+    align-items: flex-start;
+	margin-bottom: 30px;
+}
+
+#step5 .sticky {
+	margin-left: 10%;
+    max-width: 70%;
+}
+
+/* text style */
+.basic-text {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #656565;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* button style */
+.btn {
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: normal;
+    font-size: 15px;
+	margin-top: 70px;
+	text-align: center;
+}
+.next-btn {
+    display: inline-flex;
+    padding: 10px 50px;
+    color: #fcfcfc;
+    background: #000000;
+    border: none;
+    cursor: pointer;
+	margin-bottom: 20px;
+}
+.pre-btn {
+    display: inline-flex;
+    padding: 10px 50px;
+    color: #fcfcfc;
+    background: #000000;
+    border: none;
+    cursor: pointer;
+	margin-right: 3px;
+	margin-bottom: 20px;
+}
+.submit-btn {
+    display: inline-flex;
+    padding: 10px 50px;
+    color: #fcfcfc;
+    background: #000000;
+    border: none;
+    cursor: pointer;
+	margin-bottom: 20px;
+}
