@@ -18,11 +18,6 @@ html, body {
     height: 30px;
     background-color: #9d9fa1;
 }
-.menu-text {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
 /* Radio */
 .radio {
 	display: none;
@@ -117,7 +112,7 @@ label {
 	left: 6px;
 }
 .checkbox-style {
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .end{
@@ -129,15 +124,22 @@ label {
 
 /* menu-box */
 .menu-box .menu-text {
+	max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 20px;
     line-height: 20px;
     color: #656565;
     width: 100%;
-	margin-top: 10px;
+    margin-top: 10px;
     margin-bottom: 20px;
     cursor: pointer;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .menu-box .menu-text .click{
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -146,6 +148,9 @@ label {
     line-height: 20px;
     color: #f83131;
     flex-wrap: wrap;
+}
+.menu {
+    margin: 10px 10px;
 }
 
 /* form-box */
@@ -209,8 +214,9 @@ input:focus {
     cursor: pointer;
 }
 /* step2 */
+
 /* step3 */
-#step3 .step3-page1 {
+#step3 .step3-page {
 	display: flex;
 }
 #step3 .dafault {
@@ -222,7 +228,7 @@ input:focus {
     list-style-position: outside;
     padding-left: 10px;
 	margin-left: 10%;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 200%;
 }
 #step3 .optional { 
@@ -230,15 +236,14 @@ input:focus {
 	margin-left: 15%;	
 }
 #step3 .const-item {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
 }
 #step3 .const-input-box {
-	font-size: 20px;
+	font-size: 16px;
 	width: 500px;
     height: 30px;
     border : 1px solid #232323;
-	font-size: 20px;
 }
 #step3 .comment {
 	font-weight: bold;
@@ -246,39 +251,65 @@ input:focus {
 }
 
 /* step4 */
-#step4 .font-select {
+#step4 .select-table {
+	max-width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#step4 #const-table {
+    border-collapse: collapse;
+	margin-top: 20px;
+    width: 80%;
+	text-align: center;
+}
+
+#step4 #const-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#step4 #const-table td.clicked {
+    background-color: lightblue;
+}
+
+/* step5 */
+#step5 .font-select {
 	display: flex;
 }
-#step4 .font-radio-style {
+#step5 .font-radio-style {
 	width: 30%;
 	font-size: 20px;
 	line-height: 300%;
 	margin-left: 15%;
 }
-#step4 .font-input-box {
+#step5 .font-input-box {
 	width: 80px;
     height: 30px;
     border : 1px solid #232323;
 	font-size: 20px;
 }
-#step4 .font-div {
+#step5 .font-div {
 	font-size: 30px;
 	margin: 50px;
 }
-#step4 .font-ex {
+#step5 .font-ex {
 	display: inline-block;
 	margin-bottom: 10px;
 	color: white;
 	background-color: #00a1b7;
 }
 
-/* step5 */
-#step5 .sticky-checkbox {
+/* step6 */
+#step6 .sticky-checkbox {
     display: flex;
     align-items: flex-start;
 	margin-bottom: 30px;
 }
-#step5 .sticky {
+#step6 .sticky {
 	margin-left: 10%;
     max-width: 70%;
 }

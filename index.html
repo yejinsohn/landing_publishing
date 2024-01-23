@@ -22,10 +22,11 @@
             <div class="menu-text">
                 <p class="menu">Step 1. 브랜드 이미지</p>
                 <p class="menu">▶ Step 2. 메인 화면 선택</p>
-                <p class="menu">▶ Step 3. 구성 선택</p>
-                <p class="menu">▶ Step 4. 강조 폰트 선택</p>
-                <p class="menu">▶ Step 5. 스티키 메뉴 추가 여부</p>
-                <p class="menu">▶ Step 6. 기본 정보</p>
+                <p class="menu">▶ Step 3. 구성 선택1</p>
+                <p class="menu">▶ Step 4. 구성 선택2</p>
+                <p class="menu">▶ Step 5. 강조 폰트 선택</p>
+                <p class="menu">▶ Step 6. 스티키 메뉴 추가 여부</p>
+                <p class="menu">▶ Step 7. 기본 정보</p>
             </div>
         </div>
     </section>
@@ -86,15 +87,15 @@
                     </div>
                 </div>
             </div>
-            <!-- Step3. 구성 선택 -->
-            <div class="menu-area" style="display: block;">
+            <!-- Step3. 구성 선택1 -->
+            <div class="menu-area" style="display: none;">
                 <p class="intro">
                     랜딩페이지에 삽입하고 싶은 영역들을 선택하고<br>
                     디자인을 고를 수 있습니다.
                 </p>
                 <p class="end"></p>
                 <div class="menu-step" id="step3">
-                    <div class="step3-page1">
+                    <div class="step3-page">
                         <div class="default">
                             <p class="const-item">기본 사항</p>
                             <ol>
@@ -121,19 +122,53 @@
                         </div>
                     </div>
                     <p class="comment">* 선택하신 브랜드 이미지/내용/컬러를 참고하여 전문가가 영역 순서를 배치합니다.</p>
-                    <div class="step3-page2"></div>
-
                     <div class="btn">
                         <span class="pre-btn" onclick="prev(2)">이전</span>
                         <span class="next-btn" onclick="next(2)">다음</span>
                     </div>
                 </div>
             </div>
-            <!-- Step4. 강조 폰트 선택 -->
+             <!-- Step4. 구성 선택2 -->
+            <div class="menu-area" style="display: block;">
+                <p class="intro">
+                    랜딩페이지에 삽입하고 싶은 영역들을 선택하고<br>
+                    디자인을 고를 수 있습니다.
+                </p>
+                <p class="end"></p>
+                <div class="menu-step" id="step4">
+                    <div class="select-table">
+                        <table id="const-table">
+                            <tr>
+                                <td>항목 1</td>
+                                <td>항목 2</td>
+                                <td>항목 3</td>
+                                <td>항목 4</td>
+                                <td>항목 5</td>
+                                <td>항목 6</td>
+                                <td>항목 7</td>
+                            </tr>
+                            <tr>
+                                <td>항목 8</td>
+                                <td>항목 9</td>
+                                <td>항목 10</td>
+                                <td>항목 11</td>
+                                <td>항목 12</td>
+                                <td>항목 13</td>
+                                <td>항목 14</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="btn">
+                    <span class="pre-btn" onclick="prev(3)">이전</span>
+                    <span class="next-btn" onclick="next(3)">다음</span>
+                </div>
+            </div>
+            <!-- Step5. 강조 폰트 선택 -->
             <div class="menu-area" style="display: none;">
                 <p class="intro"></p>
                 <p class="end"></p>
-                <div class="menu-step" id="step4">
+                <div class="menu-step" id="step5">
                     <div class="font-select">
                         <div class="font-radio-style">
                             <input type="radio" id="radio-4-1" name="font-radio" class="radio big-radio" value="전통적인" onchange="shoFontDiv()"/><label for="radio-4-1"></label>전통적인<br/> 
@@ -183,19 +218,19 @@
                         </div>
                     </div>
                     <div class="btn">
-                        <span class="pre-btn" onclick="prev(3)">이전</span>
-                        <span class="next-btn" onclick="next(3)">다음</span>
+                        <span class="pre-btn" onclick="prev(4)">이전</span>
+                        <span class="next-btn" onclick="next(4)">다음</span>
                     </div>
                 </div>
             </div>
-            <!-- Step5. 스티키 메뉴 추가 여부 -->
+            <!-- Step6. 스티키 메뉴 추가 여부 -->
             <div class="menu-area" style="display: none;">
                 <p class="intro">
                     스티키 메뉴란 사이트를 아래로 스크롤해도<br>
                     고정으로 표시되는 메뉴를 뜻합니다.
                 </p>
                 <p class="end"></p>
-                <div class="menu-step" id="step5">
+                <div class="menu-step" id="step6">
                     <div class="sticky-checkbox">
                         <div class="checkbox-style">
                             <input type="checkbox" id="checkbox-1-1" class="checkbox big-checkbox" /><label for="checkbox-1-1"></label>추가
@@ -209,18 +244,18 @@
                     </p>
 
                     <div class="btn">
-                        <span class="pre-btn" onclick="prev(4)">이전</span>
-                        <span class="next-btn" onclick="next(4)">다음</span>
+                        <span class="pre-btn" onclick="prev(5)">이전</span>
+                        <span class="next-btn" onclick="next(5)">다음</span>
                     </div>
                 </div>
             </div>
-            <!-- Step6. 기본 정보 -->
+            <!-- Step7. 기본 정보 -->
             <div class="menu-area" style="display: none;">
                 <p class="intro">
                     작성하신 내용을 바탕으로 담당자님께 전문 PM이 연락 드립니다.
                 </p>
                 <p class="end"></p>
-                <div class="menu-step" id="step6">
+                <div class="menu-step" id="step7">
                     <div class="select">
                         <p class="select-item">1. 담당자명</p> 
                         <input class="input-box" type="text" placeholder="담당자 성함을 입력해주세요.";>
@@ -234,7 +269,7 @@
                         <input class="input-box" type="email" placeholder="이메일 주소를 입력해주세요.";>
                     </div>
                     <div class="btn">
-                        <span class="pre-btn" onclick="prev(5)">이전</span>
+                        <span class="pre-btn" onclick="prev(6)">이전</span>
                         <span class="submit-btn">제출하기</span>
                     </div>
                 </div>
