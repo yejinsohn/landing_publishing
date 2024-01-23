@@ -86,8 +86,8 @@
                             <label for="radio-2-1"></label>
                             당사 로고가 없는 경우, 대표메뉴 사진을 강조하고 싶은 경우<br />
                             <div class="main-div" id="div-radio-2-1" style="display: none;">
-                                <button class="main-div-button">레퍼런스 보기</button>
-                                <div class="main-div-content">
+                                <button class="Reference-button">레퍼런스 보기</button>
+                                <div class="detail-content">
                                     <p class="basic-text">
                                         필수사항</br>
                                         - 4~6자리 짝수 메인 텍스트(ex.상호명, 강조내용)<br>
@@ -113,8 +113,8 @@
                             로고(상호명)을 강조하고 싶은 경우<br />
 
                             <div class="main-div" id="div-radio-2-2" style="display: none;">
-                                <button class="main-div-button">레퍼런스 보기</button>
-                                <div class="main-div-content">
+                                <button class="Reference-button">레퍼런스 보기</button>
+                                <div class="detail-content">
                                     <p class="basic-text">
                                         필수사항<br>
                                         - 로고파일<br>
@@ -135,8 +135,8 @@
                             점심/저녁 영업을 강조하고 싶은 경우<br />
 
                             <div class="main-div" id="div-radio-2-3" style="display: none;">
-                                <button class="main-div-button">레퍼런스 보기</button>
-                                <div class="main-div-content">
+                                <button class="Reference-button">레퍼런스 보기</button>
+                                <div class="detail-content">
                                     <p class="basic-text">
                                         필수사항<br>
                                         - 로고 위에 들어갈 10~30자 이내의 서브 텍스트<br>
@@ -161,8 +161,8 @@
                             상호명보다 특징을 강조하고 싶은 경우<br />
 
                             <div class="main-div" id="div-radio-2-4" style="display: none;">
-                                <button class="main-div-button">레퍼런스 보기</button>
-                                <div class="main-div-content">
+                                <button class="Reference-button">레퍼런스 보기</button>
+                                <div class="detail-content">
                                     <p class="basic-text">
                                         필수사항<br>
                                         - 로고 위에 들어갈 10~20자 이내의 서브 텍스트 (ex. 대한민국 대표 쪽갈비찜)<br>
@@ -187,8 +187,8 @@
                             상호명과 특징만 심플하게 강조하고 싶은 경우<br />
 
                             <div class="main-div" id="div-radio-2-5" style="display: none;">
-                                <button class="main-div-button">레퍼런스 보기</button>
-                                <div class="main-div-content">
+                                <button class="Reference-button">레퍼런스 보기</button>
+                                <div class="detail-content">
                                     <p class="basic-text">
                                         필수사항<br>
                                         - 로고파일<br>
@@ -211,8 +211,8 @@
                             대표사진과 특징을 강조하고 싶은 경우<br />
 
                             <div class="main-div" id="div-radio-2-6" style="display: none;">
-                                <button class="main-div-button">레퍼런스 보기</button>
-                                <div class="main-div-content">
+                                <button class="Reference-button">레퍼런스 보기</button>
+                                <div class="detail-content">
                                     <p class="basic-text">
                                         필수사항<br>
                                         - 로고파일(심볼, 워드형 둘다 있으면 좋음)<br>
@@ -262,12 +262,13 @@
                         <div class="optional">
                             <p class="const-item">선택 사항 (중복 선택 가능)</p>
                             <div class="checkbox-style">
-                                <input type="checkbox" id="checkbox-2-1" class="checkbox big-checkbox" value="매출 그래프" onchange=""/><label for="checkbox-2-1"></label>매출 그래프<br/> 
-                                <input type="checkbox" id="checkbox-2-2" class="checkbox big-checkbox" value="유튜브 영상" onchange=""/><label for="checkbox-2-2"></label>유튜브 영상<br/>
-                                <input type="checkbox" id="checkbox-2-3" class="checkbox big-checkbox"value="인스타그램 이미지" onchange=""/><label for="checkbox-2-3"></label>인스타그램 이미지<br/>
-                                <input type="checkbox" id="checkbox-2-4" class="checkbox big-checkbox" value="브랜드 소개" onchange=""/><label for="checkbox-2-4"></label>브랜드 소개<br/>
-                                <input type="checkbox" id="checkbox-2-5" class="checkbox big-checkbox" value="창업 비용" onchange=""/><label for="checkbox-2-5"></label>창업비용<br/>
-                                <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="직접입력" onchange=""/><label for="checkbox-2-6"></label>
+                                <input type="checkbox" id="checkbox-2-1" class="checkbox big-checkbox" value="매출 그래프" onchange="showOptionalTableDiv()"/><label for="checkbox-2-1"></label>매출 그래프<br/> 
+                                <input type="checkbox" id="checkbox-2-2" class="checkbox big-checkbox" value="유튜브 영상" onchange="showOptionalTableDiv()"/><label for="checkbox-2-2"></label>유튜브 영상<br/>
+                                <input type="checkbox" id="checkbox-2-3" class="checkbox big-checkbox" value="인스타그램 이미지" onchange="showOptionalTableDiv()"/><label for="checkbox-2-3"></label>인스타그램 이미지<br/>
+                                <input type="checkbox" id="checkbox-2-4" class="checkbox big-checkbox" value="프랜차이즈 소개" onchange="showOptionalTableDiv()"/><label for="checkbox-2-4"></label>프랜차이즈 소개<br/>
+                                <input type="checkbox" id="checkbox-2-5" class="checkbox big-checkbox" value="브랜드 소개" onchange="showOptionalTableDiv()"/><label for="checkbox-2-5"></label>브랜드 소개<br/>
+                                <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="창업 비용" onchange="showOptionalTableDiv()"/><label for="checkbox-2-6"></label>창업비용<br/>
+                                <input type="checkbox" id="checkbox-2-7" class="checkbox big-checkbox" value="직접입력" onchange="showOptionalTableDiv()"/><label for="checkbox-2-7"></label>
                                 <input class="const-input-box" type="text" placeholder="직접입력";><br/>
                             </div>
                         </div>
@@ -288,26 +289,470 @@
                 <p class="end"></p>
                 <div class="menu-step" id="step4">
                     <div class="select-table">
-                        <table id="const-table">
+                        <table id="const-table" onclick="changeColor(event)">
                             <tr>
-                                <td>항목 1</td>
-                                <td>항목 2</td>
-                                <td>항목 3</td>
-                                <td>항목 4</td>
-                                <td>항목 5</td>
-                                <td>항목 6</td>
-                                <td>항목 7</td>
+                                <td class="clickable-cell">특징</td>
+                                <td class="clickable-cell">메뉴 소개</td>
+                                <td class="clickable-cell">영수증</td>
+                                <td class="clickable-cell">인테리어</td>
+                                <td class="clickable-cell">후기</td>
+                                <td class="clickable-cell">상담 신청 폼</td>
+                                <td class="clickable-cell">가맹절차</td>
                             </tr>
                             <tr>
-                                <td>항목 8</td>
-                                <td>항목 9</td>
-                                <td>항목 10</td>
-                                <td>항목 11</td>
-                                <td>항목 12</td>
-                                <td>항목 13</td>
-                                <td>항목 14</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-1" style="display: none;">매출 그래프</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-2" style="display: none;">유튜브 영상</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-3" style="display: none;">인스타그램 이미지</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-4" style="display: none;">프렌차이즈 소개</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-5" style="display: none;">브랜드 소개</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-6" style="display: none;">창업 비용</td>
+                                <td style="display: none;"></td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="const-feature" style="display: none;">
+                        <input type="radio" id="radio-5-1" name="feature-radio" class="radio big-radio" value="feature-1" onchange="showFeatureDiv()" />
+                        <label for="radio-5-1"></label>
+                        특징을 상세하게 글로 표현하고 싶은 경우(2개이상부터 가능)<br/>
+                        <div class="feature-div" id="div-radio-5-1" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 각 특징에 맞는 이미지 제공 (1000px 이상의 고해상도) <br>
+                                    - 15자 이내의 각 특징 제목<br>
+                                    - 150자 이내의 각 특징 설명
+                                </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-feature.png" alt="const-feature-set1">
+                                    <img class="mobile" src="./img/step4/const-feature-mobile.png" alt="const-feature-set1-mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-5-2" name="feature-radio" class="radio big-radio" value="feature-2" onchange="showFeatureDiv()" />
+                        <label for="radio-5-2"></label>
+                        사진과 짧은 설명글이 있는 경우(2~4개)<br/>
+                        <div class="feature-div" id="div-radio-5-2" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 각 특징에 맞는 이미지<br>
+                                    - 25자 이내의 제목<br>
+                                    - 50자 이내의 설명<br>
+                                    *강조할 부분은 ‘와 ‘ 사이에 적어주시면 됩니다.
+                                </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-feature2.png" alt="const-feature-set2">
+                                    <img class="mobile" src="./img/step4/const-feature2-mobile.png" alt="const-feature-set2-mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-5-3" name="feature-radio" class="radio big-radio" value="feature-3" onchange="showFeatureDiv()" />
+                        <label for="radio-5-3"></label>
+                        단어로 된 여러 특징을 간단히 설명하고 싶은데 하나하나 매칭되는 이미지가 없는 경우(3~9개)<br/>
+                        <div class="feature-div" id="div-radio-5-3" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 가운데 들어갈 경계가 깔끔한 누끼 이미지(1000px 이상 고화질)<br>
+                                    - 각 키워드 (3개~ 9개)
+                                </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-feature3.png" alt="const-feature-set3">
+                                    <img class="mobile" src="./img/step4/const-feature3-mobile.jpg" alt="const-feature-set3-mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-5-4" name="feature-radio" class="radio big-radio" value="feature-4" onchange="showFeatureDiv()" />
+                        <label for="radio-5-4"></label>
+                        모델 이미지가 있는 경우(4개)<br/>
+                        <div class="feature-div" id="div-radio-5-4" style="display: none;">
+                                <button class="Reference-button">레퍼런스 보기</button>
+                                <div class="detail-content">
+                                    <p class="basic-text">
+                                        필요자료:<br>
+                                        - 일정한 느낌과 사이즈의 메뉴 고화질 사진(가로 1000px 이상)<br>
+                                        - 30자이내의 각 특징 4가지. 강조할 부분은 ‘ ‘ 안에<br>
+                                        - (선택) 하단에 넣을 텍스트
+                                    </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-feature4.png" alt="const-feature-set4">
+                                    <img class="mobile" src="./img/step4/const-feature4-mobile.png" alt="const-feature-set4-mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-5-5" name="feature-radio" class="radio big-radio" value="feature-5" onchange="showFeatureDiv()" />
+                        <label for="radio-5-5"></label>
+                        사진과 설명글이 있는 경우<br/>
+                        <div class="feature-div" id="div-radio-5-5" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 각 특징에 맞는 이미지
+                                    - 25자 이내의 제목
+                                    - 60자 이내의 설명
+                                    * 강조할 부분은 ‘와 ‘ 사이에 적어주시면 됩니다.
+                                </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-feature5.png" alt="const-feature-set5">
+                                    <img class="mobile" src="./img/step4/const-feature5-mobile.png" alt="const-feature-set5-mobile">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="const-menu" style="display: none;">
+                        <input type="radio" id="radio-6-1" name="menu-radio" class="radio big-radio" value="menu-1" onchange="showMenuDiv()" />
+                        <label for="radio-6-1"></label>
+                        메인, 사이드 메뉴가 나뉘어져 있는 경우<br/>
+                        <div class="menu-div" id="div-radio-6-1" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 일정한 느낌과 사이즈의 메뉴 고화질 사진(가로 1000px 이상)<br>
+                                    - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기(스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                    - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                    (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-menu.png" alt="const-menu-set1">
+                                    <img class="mobile" src="./img/step4/const-menu-mobile.png" alt="const-menu-set1-mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-6-2" name="menu-radio" class="radio big-radio" value="menu-2" onchange="showMenuDiv()" />
+                        <label for="radio-6-2"></label>
+                        메뉴 가짓수가 적은 경우<br/>
+                        <div class="menu-div" id="div-radio-6-2" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 일정한 각도로 촬영한 고화질 메뉴 사진의 누끼(가로 1000px 이상)<br>
+                                    (누끼 딴 png 이미지이거나 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)<br>
+                                    - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                    (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                    - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                    (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-menu2.png" alt="const-menu-set2">
+                                    <img class="mobile" src="./img/step4/const-menu2-mobile.png" alt="const-menu-set2-mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-6-3" name="menu-radio" class="radio big-radio" value="menu-3" onchange="showMenuDiv()" />
+                        <label for="radio-6-3"></label>
+                        메뉴 품목이 특화되어 가짓수가 적은 경우, 메뉴개별 설명보다 묶여진 카테고리가 중요한 경우<br/>
+                        <div class="menu-div" id="div-radio-6-3" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 일정한 각도로 촬영하였으며 배경이 투명한 1000px이상의 경계가 깔끔한 누끼 png <br>
+                                    (누끼작업요청시 누끼가 가능하도록 방해물이 없는 형태가 확실한 이미지)
+                                    - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                    (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                    - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                    (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                </p>
+                                <div class="const-img">
+                                    <img class="basic" src="./img/step4/const-menu3.png" alt="const-menu-set3">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-6-4" name="menu-radio" class="radio big-radio" value="menu-4" onchange="showMenuDiv()" />
+                        <label for="radio-6-4"></label>
+                        메뉴하나하나를 강조하고 싶은 경우, 카테고리가 나뉜 경우 pc에서는 임팩트 있으나, 모바일에선 반대로 작용<br/>
+                        <div class="menu-div" id="div-radio-6-4" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                    - 일정한 각도로 촬영하였으며 배경이 투명한 1000px이상의 경계가 깔끔한 누끼 png<br>
+                                    - 누끼 요청시 10만원 추가비용(누끼 작업에 방해되는 장식물 없이 형태가 깔끔한 이미지만 가능-장식물이 음식과 떨어져있으면 O, 음식 앞을 가리고 있으면 X)<br>
+                                    - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                    (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )
+                                    - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                    (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                </p>
+                                <div class="const-img">
+                                    <img class="mobile" src="./img/step4/const-menu4-mobile.png" alt="menu4-mobile">
+                                    <img class="basic" src="./img/step4/const-menu4.png" alt="menu4">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-6-5" name="menu-radio" class="radio big-radio" value="menu-5" onchange="showMenuDiv()" />
+                        <label for="radio-6-5"></label>
+                        메뉴하나하나를 강조하고 싶은 경우, 카테고리가 나뉜 경우 pc에서는 임팩트 있으나, 모바일에선 반대로 작용</br>
+                        <div class="menu-div" id="div-radio-6-5" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료: <br>
+                                    - 비슷한 느낌의 각 메뉴 고화질 사진들 (2000px 이상)<br>
+                                    - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 8자이내 표기<br>
+                                    (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )
+                                    - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                    (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))<br>
+                                    - 각 메뉴 설명 30자 이내 (생략 가능)
+                                </p>
+                                <div class="const-img">
+                                    <img class="mobile" src="./img/step4/const-menu5-mobile.png" alt="menu4-mobile">
+                                    <img class="basic" src="./img/step4/const-menu5.png" alt="menu4">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" id="radio-6-6" name="menu-radio" class="radio big-radio" value="menu-6" onchange="showMenuDiv()" />
+                        <label for="radio-6-6"></label>
+                        메뉴이름이 스페이스바포함 7자 이내로 짧은 경우, 음식사진 보다 종류 소개가 중요한 경우</br>
+                        <div class="menu-div" id="div-radio-6-6" style="display: none;">
+                            <button class="Reference-button">레퍼런스 보기</button>
+                            <div class="detail-content">
+                                <p class="basic-text">
+                                    필요자료:<br>
+                                                - 일정한 각도로 촬영한 고화질 사진(가로 1000px 이상)<br>
+                                                - 사진과 메뉴 일치를 위해 사진파일명에 메뉴 이름 표기<br>
+                                                (레이아웃 특성상 공간이 적으므로 스페이스바 포함 7자이내여야 함)<br>
+                                                (스페이스바는 ‘_(언더바)’ 처리 - ex. 간장게장_정식.JPG )<br>
+                                                - 사진파일명과 메뉴이름을 표기한 텍스트파일 전달<br>
+                                                (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
+                                </p>
+                                <div class="const-img">
+                                    <img class="mobile" src="./img/step4/const-menu6-mobile.png" alt="menu4-mobile">
+                                    <img class="basic" src="./img/step4/const-menu6.png" alt="menu4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="const-receipt" style="display: none;">
+                        <div class="radio-style">
+                            <input type="radio" id="radio-7-1" name="receipt-radio" class="radio big-radio" value="Set1" onchange="showReceiptDiv()"/><label for="radio-7-1"></label>
+                            자동 슬라이드(일매출, 월매출, 배달매출 추가 가능)
+                        </div>
+                        <div class="receipt-div" id="div-radio-7-1" style="display: none;">
+                            <img class="basic" src="./img/step4/const-receipt-set1.png" alt="receipt-set1">
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-7-2" name="receipt-radio" class="radio big-radio" value="Set2" onchange="showReceiptDiv()"/><label for="radio-7-2"></label>
+                            좌우버튼, 월매출, 배달매출추가가능
+                        </div>
+                        <div class="receipt-div" id="div-radio-7-2" style="display: none;">
+                            <img class="basic" src="./img/step4/const-receipt-set2.png" alt="receipt-set2">
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-7-3" name="receipt-radio" class="radio big-radio" value="Set3" onchange="showReceiptDiv()"/><label for="radio-7-3"></label>
+                            월매출+일매출 모두 노출, 배달매출 추가가능, 페이지네이션
+                        </div>
+                        <div class="receipt-div" id="div-radio-7-3" style="display: none;">
+                            <img class="basic" src="./img/step4/const-receipt-set3.png" alt="receipt-set3">
+                        </div>
+                    </div>
+                    <div class="const-interior" style="display: none;">
+                        <div class="img-content">
+                            <img class="basic" src="./img/step4/const-interior.png" alt="const-interior">
+                            <p class="basic-text"> 필요자료 : 2000px 이상의 고화질 사진</p>    
+                        </div>
+                    </div>
+                    <div class="const-review" style="display: none;">
+                        <div class="radio-style">
+                            <input type="radio" id="radio-8-1" name="review-radio" class="radio big-radio" value="Set1" onchange="showReviewDiv()"/><label for="radio-8-1"></label>
+                            블로그 리뷰
+                        </div>
+                        <div class="review-div" id="div-radio-8-1" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-blog.png" alt="review-set1">
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-8-2" name="review-radio" class="radio big-radio" value="Set2" onchange="showReviewDiv()"/><label for="radio-8-2"></label>
+                            배달앱 리뷰1
+                        </div>
+                        <div class="review-div" id="div-radio-8-2" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-review.png" alt="review-set2">
+                                <p class="basic-text"> 필요자료 : 캡쳐 원본이미지 (1000px 이상)<br>
+                                    - 내용길이가 비슷한 리뷰들로 캡쳐 요망(들쑥날쑥져서 비어 보임)</p>
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-8-3" name="review-radio" class="radio big-radio" value="Set3" onchange="showReviewDiv()"/><label for="radio-8-3"></label>
+                            배달앱 리뷰2
+                        </div>
+                        <div class="review-div" id="div-radio-8-3" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-review2.png" alt="review-set3">
+                                <p class="basic-text"> 필요자료 : 캡쳐 원본이미지 (1000px 이상)<br>
+                                    - 내용길이가 비슷한 리뷰들로 캡쳐 요망(들쑥날쑥져서 비어 보임)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="const-contact" style="display: none;">
+                        <div class="radio-style">
+                            <input type="radio" id="radio-9-1" name="contact-radio" class="radio big-radio" value="Set1" onchange="showContactDiv()"/><label for="radio-9-1"></label>
+                            상담신청<br/>                               
+                        </div>
+                        <div class="contact-div" id="div-radio-9-1" style="display: none;">
+                            <div class="contact-content">
+                                <img class="basic" src="./img/step4/const-contact.png" alt="const-contact">
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-9-2" name="contact-radio" class="radio big-radio" value="Set2" onchange="showContactDiv()"/><label for="radio-9-2"></label>
+                            상담신청 하단 스티키<br/>                               
+                        </div>
+                        <div class="contact-div" id="div-radio-9-2" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-contact-sticky.png" alt="const-contact-sticky">
+                            </div>
+                        </div>
+                        <p class="basic-text">* 상단 스티키 메뉴, 상담신청 페이지, 상담신청 스티키 하단바 3개 중 1개만 선택 가능합니다.</p>
+                    </div>
+                    <div class="const-affiliate-step" style="display: none;">
+                        <div class="radio-style">
+                            <input type="radio" id="radio-10-1" name="step-radio" class="radio big-radio" value="Set1" onchange="showStepDiv()"/><label for="radio-10-1"></label>
+                            8개 가맹절차(간단한 소개)<br/>                               
+                        </div>
+                        <div class="step-div" id="div-radio-10-1" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-step.png" alt="const-affiliate-step">
+                                <p class="basic-text">
+                                    필요자료 : 10자이내 단계별 제목과 25자 이내의 설명
+                                </p>
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-10-2" name="step-radio" class="radio big-radio" value="Set2" onchange="showStepDiv()"/><label for="radio-10-2"></label>
+                            8개 가맹절차<br/>                               
+                        </div>
+                        <div class="step-div" id="div-radio-10-2" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-step2.png" alt="const-affiliate-step2">
+                                <p class="basic-text">
+                                    필요자료 : 10자이내 단계별 제목
+                                </p>
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-10-3" name="step-radio" class="radio big-radio" value="Set3" onchange="showStepDiv()"/><label for="radio-10-3"></label>
+                            6개 가맹절차(간단한 소개)<br/>                               
+                        </div>
+                        <div class="step-div" id="div-radio-10-3" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-step3.png" alt="const-affiliate-step3">
+                                <p class="basic-text">
+                                    필요자료 : 10자이내 단계별 제목과 25자 이내의 설명
+                                </p>
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-10-4" name="step-radio" class="radio big-radio" value="Set4" onchange="showStepDiv()"/><label for="radio-10-4"></label>
+                            6개 가맹절차<br/>                               
+                        </div>
+                        <div class="step-div" id="div-radio-10-4" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-step4.png" alt="const-affiliate-step3">
+                                <p class="basic-text">
+                                    필요자료 : 10자이내 단계별 제목
+                                </p>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="const-graph" style="display: none;">
+                        <div class="radio-style">
+                            <input type="radio" id="radio-11-1" name="graph-radio" class="radio big-radio" value="pie" onchange="showGraphDiv()"/><label for="radio-11-1"></label>
+                            원형 그래프<br/>                               
+                        </div>
+                        <div class="graph-div" id="div-radio-11-1" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-graph-pie.png" alt="const-graph-pie">
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-11-2" name="graph-radio" class="radio big-radio" value="column" onchange="showGraphDiv()"/><label for="radio-11-2"></label>
+                            막대 그래프<br/>                               
+                        </div>
+                        <div class="graph-div" id="div-radio-11-2" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-graph-column.png" alt="const-graph-column">
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-11-3" name="graph-radio" class="radio big-radio" value="growth" onchange="showGraphDiv()"/><label for="radio-11-3"></label>
+                            성장 그래프<br/>                               
+                        </div>
+                        <div class="graph-div" id="div-radio-11-3" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-graph-growth.png" alt="const-graph-growth">
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-11-4" name="graph-radio" class="radio big-radio" value="cost" onchange="showGraphDiv()"/><label for="radio-11-4"></label>
+                            단가 비교<br/>                               
+                        </div>
+                        <div class="graph-div" id="div-radio-11-4" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-cost.png" alt="const-cost">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="const-youtube" style="display: none;">
+                        <div class="radio-style">
+                            <input type="radio" id="radio-12-1" name="youtube-radio" class="radio big-radio" value="Set1" onchange="showYoutubeDiv()"/><label for="radio-12-1"></label>
+                            미디어<br/>                               
+                        </div>
+                        <div class="youtube-div" id="div-radio-12-1" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-youtube.png" alt="const-youtube">
+                                <p class="basic-text">필요자료 : 1920HD 영상</p>
+                            </div>
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-12-2" name="youtube-radio" class="radio big-radio" value="Set2" onchange="showYoutubeDiv()"/><label for="radio-12-2"></label>
+                            전체화면<br/>                               
+                        </div>
+                        <div class="youtube-div" id="div-radio-12-2" style="display: none;">
+                            <div class="img-content">
+                                <img class="basic" src="./img/step4/const-youtube2.png" alt="const-youtube">
+                                <p class="basic-text">필요자료 : 1920HD 영상 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="const-insta" style="display: none;">
+                        <div class="img-content">
+                            <div class="insta-img">
+                                <img class="mobile" src="./img/step4/const-insta-mobile.png" alt="const-insta-mobile">
+                                <img class="basic" src="./img/step4/const-insta.png" alt="const-insta">
+                            </div>
+                            <p class="basic-text">
+                                필요자료 : 캡쳐 원본이미지 (1000px 이상)<br>
+                                - 내용길이가 비슷하게 캡쳐 요망(길면 잘림)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="const-brand" style="display: none;">
+                        <div class="img-content">
+                            <div class="insta-img">
+                                <img class="mobile" src="./img/step4/const-franchise-mobile.png" alt="const-franchise-mobile">
+                                <img class="basic" src="./img/step4/const-franchise.png" alt="const-franchise">
+                            </div>
+                            <p class="basic-text">
+                            필요자료 : 각 로고 500px 이상의 이미지(배경이 투명한 png일수록 활용도가 더 좋음) 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="const-cost" style="display: none;">
+                        <div class="img-content">
+                            <div class="insta-img">
+                                <img class="basic" src="./img/step4/const-price.png" alt="const-price">
+                            </div>
+                            <p class="basic-text">
+                                * 주신 화면에 따라 테이블, 칸 등 변경 가능
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="btn">

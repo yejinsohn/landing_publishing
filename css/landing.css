@@ -18,6 +18,7 @@ html, body {
     height: 30px;
     background-color: #9d9fa1;
 }
+
 /* Radio */
 .radio {
 	display: none;
@@ -56,7 +57,7 @@ html, body {
 .big-radio + label {
 	padding: 16px;
     margin: 5px;
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 .big-radio:checked + label:after {
 	width: 24px;
@@ -66,6 +67,7 @@ html, body {
 }
 .radio-style {
 	line-height: 150%;
+	align-items: center;
 }
 
 /* check box */
@@ -113,6 +115,7 @@ label {
 }
 .checkbox-style {
 	font-size: 16px;
+	align-items: center;
 }
 
 .end{
@@ -213,19 +216,21 @@ input:focus {
     border: 1px dashed rgb(158, 156, 156);
     cursor: pointer;
 }
+
 /* step2 */
-.main-div .main-div-content{
+.detail-content {
     display: flex;
     justify-content: space-between;
 	margin-left: 10px;
 }
 
-.main-div .main-div-button {
+
+.Reference-button {
 	background-color: #000000;
     color: white;
     font-size: 16px;
     margin: 30px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
 }
@@ -289,6 +294,7 @@ input:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 30px;
 }
 
 #step4 #const-table {
@@ -300,13 +306,67 @@ input:focus {
 
 #step4 #const-table td {
     border: 1px solid #000;
-    padding: 10px;
-    cursor: pointer;
+    padding: 10px 40px;
 }
 
-#step4 #const-table td.clicked {
-    background-color: lightblue;
+.clickable-cell {
+	cursor: pointer;
+	transition: background-color 0.2s;
 }
+
+.clicked {
+	color: white;
+	background-color: black;
+}
+
+#step4 .const-img {
+	margin-top: 30px;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.const-img .mobile {
+    width: 13%;
+    object-fit: cover;
+}
+.const-img .basic {
+    width: 40%;
+    object-fit: cover;
+}
+.const-receipt .basic {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 5%;
+	width: 50%;
+}
+.img-content {
+	margin-left: 5%;
+}
+.img-content .basic {
+	width: 50%;
+}
+.contact-content .basic {
+	margin-left: 5%;
+	width: 30%;
+}
+.insta-img {
+	display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+	gap: 15px;
+}
+.insta-img .basic {
+	width: 40%;
+}
+.insta-img .mobile {
+	width: 20%;
+}
+
+
 
 /* step5 */
 #step5 .font-select {
