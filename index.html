@@ -20,7 +20,7 @@
         <div class="menu-box">
             <div class="menu-top"></div>
             <div class="menu-text">
-                <p class="menu">Step 1. 브랜드 이미지</p>
+                <p class="menu click">Step 1. 브랜드 이미지</p>
                 <p class="menu">▶ Step 2. 메인 화면 선택</p>
                 <p class="menu">▶ Step 3. 구성 선택1</p>
                 <p class="menu">▶ Step 4. 구성 선택2</p>
@@ -33,7 +33,7 @@
     <section>
         <div class="form-box">
             <!-- Step1. 브랜드 이미지 -->
-            <div class="menu-area" style="display: none;">
+            <div class="menu-area" style="display: block;">
                 <p class="intro">
                     선택해주신 내용을 바탕으로 전문가가 랜딩페이지를 개발합니다.
                 </p>
@@ -265,10 +265,9 @@
                                 <input type="checkbox" id="checkbox-2-1" class="checkbox big-checkbox" value="매출 그래프" onchange="showOptionalTableDiv()"/><label for="checkbox-2-1"></label>매출 그래프<br/> 
                                 <input type="checkbox" id="checkbox-2-2" class="checkbox big-checkbox" value="유튜브 영상" onchange="showOptionalTableDiv()"/><label for="checkbox-2-2"></label>유튜브 영상<br/>
                                 <input type="checkbox" id="checkbox-2-3" class="checkbox big-checkbox" value="인스타그램 이미지" onchange="showOptionalTableDiv()"/><label for="checkbox-2-3"></label>인스타그램 이미지<br/>
-                                <input type="checkbox" id="checkbox-2-4" class="checkbox big-checkbox" value="프랜차이즈 소개" onchange="showOptionalTableDiv()"/><label for="checkbox-2-4"></label>프랜차이즈 소개<br/>
-                                <input type="checkbox" id="checkbox-2-5" class="checkbox big-checkbox" value="브랜드 소개" onchange="showOptionalTableDiv()"/><label for="checkbox-2-5"></label>브랜드 소개<br/>
-                                <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="창업 비용" onchange="showOptionalTableDiv()"/><label for="checkbox-2-6"></label>창업비용<br/>
-                                <input type="checkbox" id="checkbox-2-7" class="checkbox big-checkbox" value="직접입력" onchange="showOptionalTableDiv()"/><label for="checkbox-2-7"></label>
+                                <input type="checkbox" id="checkbox-2-4" class="checkbox big-checkbox" value="브랜드 소개" onchange="showOptionalTableDiv()"/><label for="checkbox-2-4"></label>브랜드 소개<br/>
+                                <input type="checkbox" id="checkbox-2-5" class="checkbox big-checkbox" value="창업 비용" onchange="showOptionalTableDiv()"/><label for="checkbox-2-5"></label>창업비용<br/>
+                                <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="직접입력" onchange="showOptionalTableDiv()"/><label for="checkbox-2-6"></label>
                                 <input class="const-input-box" type="text" placeholder="직접입력";><br/>
                             </div>
                         </div>
@@ -281,7 +280,7 @@
                 </div>
             </div>
              <!-- Step4. 구성 선택2 -->
-            <div class="menu-area" style="display: block;">
+            <div class="menu-area" style="display: none;">
                 <p class="intro">
                     랜딩페이지에 삽입하고 싶은 영역들을 선택하고<br>
                     디자인을 고를 수 있습니다.
@@ -291,7 +290,7 @@
                     <div class="select-table">
                         <table id="const-table" onclick="changeColor(event)">
                             <tr>
-                                <td class="clickable-cell">특징</td>
+                                <td class="clickable-cell clicked">특징</td>
                                 <td class="clickable-cell">메뉴 소개</td>
                                 <td class="clickable-cell">영수증</td>
                                 <td class="clickable-cell">인테리어</td>
@@ -303,14 +302,13 @@
                                 <td class="clickable-cell optional-td" id="td-checkbox-2-1" style="display: none;">매출 그래프</td>
                                 <td class="clickable-cell optional-td" id="td-checkbox-2-2" style="display: none;">유튜브 영상</td>
                                 <td class="clickable-cell optional-td" id="td-checkbox-2-3" style="display: none;">인스타그램 이미지</td>
-                                <td class="clickable-cell optional-td" id="td-checkbox-2-4" style="display: none;">프렌차이즈 소개</td>
-                                <td class="clickable-cell optional-td" id="td-checkbox-2-5" style="display: none;">브랜드 소개</td>
-                                <td class="clickable-cell optional-td" id="td-checkbox-2-6" style="display: none;">창업 비용</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-4" style="display: none;">브랜드 소개</td>
+                                <td class="clickable-cell optional-td" id="td-checkbox-2-5" style="display: none;">창업 비용</td>
                                 <td style="display: none;"></td>
                             </tr>
                         </table>
                     </div>
-                    <div class="const-feature" style="display: none;">
+                    <div class="const-feature" style="display: block;">
                         <input type="radio" id="radio-5-1" name="feature-radio" class="radio big-radio" value="feature-1" onchange="showFeatureDiv()" />
                         <label for="radio-5-1"></label>
                         특징을 상세하게 글로 표현하고 싶은 경우(2개이상부터 가능)<br/>

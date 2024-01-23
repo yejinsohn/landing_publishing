@@ -71,23 +71,54 @@ function changeColor(event) {
 
     if (target.tagName === 'TD' && target.classList.contains('clickable-cell')) {
         const cellContent = target.textContent.trim().toLowerCase();
-        const featureDiv = document.querySelector('.const-feature');
-        const menuDiv = document.querySelector('.const-menu');
-        const receiptDiv = document.querySelector('.const-receipt');
-        
 
         // 숨기기
-        featureDiv.style.display = 'none';
-        menuDiv.style.display = 'none';
+        document.querySelectorAll('.const-feature, .const-menu, .const-receipt, .const-interior, .const-review, .const-contact, .const-affiliate-step, .const-graph, .const-youtube, .const-insta, .const-brand, .const-price').forEach(function (div) {
+            div.style.display = 'none';
+        });
 
         // 보이기
-        if (cellContent === '특징') {
-            featureDiv.style.display = 'block';
-        } else if (cellContent === '메뉴 소개') {
-            menuDiv.style.display = 'block';
+        switch (cellContent) {
+            case '특징':
+                document.querySelector('.const-feature').style.display = 'block';
+                break;
+            case '메뉴 소개':
+                document.querySelector('.const-menu').style.display = 'block';
+                break;
+            case '영수증':
+                document.querySelector('.const-receipt').style.display = 'block';
+                break;
+            case '인테리어':
+                document.querySelector('.const-interior').style.display = 'block';
+                break;
+            case '후기':
+                document.querySelector('.const-review').style.display = 'block';
+                break;
+            case '상담 신청 폼':
+                document.querySelector('.const-contact').style.display = 'block';
+                break;
+            case '가맹절차':
+                document.querySelector('.const-affiliate-step').style.display = 'block';
+                break;
+            case '매출 그래프':
+                document.querySelector('.const-graph').style.display = 'block';
+                break;
+            case '유튜브 영상':
+                document.querySelector('.const-youtube').style.display = 'block';
+                break;
+            case '인스타그램 이미지':
+                document.querySelector('.const-insta').style.display = 'block';
+                break;
+            case '브랜드 소개':
+                document.querySelector('.const-brand').style.display = 'block';
+                break;
+            case '창업 비용':
+                document.querySelector('.const-price').style.display = 'block';
+                break;
+            default:
+                break;
         }
 
-        // 클릭된 td에 'clicked' 클래스 추가
         document.querySelectorAll('.clickable-cell').forEach(function (cell) {
             cell.classList.remove('clicked');
         });
