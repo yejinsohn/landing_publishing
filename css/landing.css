@@ -214,6 +214,38 @@ input:focus {
     cursor: pointer;
 }
 /* step2 */
+.main-div .main-div-content{
+    display: flex;
+    justify-content: space-between;
+	margin-left: 10px;
+}
+
+.main-div .main-div-button {
+	background-color: #000000;
+    color: white;
+    font-size: 16px;
+    margin: 30px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-div .main-div-img {
+	max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.main-div .main-div-img .basic {
+    max-width: 60%;
+}
+
+.main-div .main-div-img .mobile {
+    max-width: 40%;
+    width: 200px;
+}
 
 /* step3 */
 #step3 .step3-page {

@@ -45,6 +45,13 @@ function setColorBox() {
     }
 }
 
+// Step2 메인 화면 선택
+function showMainDiv() {
+    var selectedRadioId = $('input[name="main-radio"]:checked').attr('id');
+    $('.main-div').hide();
+    $('#div-' + selectedRadioId).show();
+}
+
 // Step4 폰트 예시
 function shoFontDiv() {
     var selectedRadioId = $('input[name="font-radio"]:checked').attr('id');
