@@ -266,8 +266,8 @@
                                 <input type="checkbox" id="checkbox-2-3" class="checkbox big-checkbox" value="인스타그램 이미지" onchange="showOptionalTableDiv()"/><label for="checkbox-2-3"></label>인스타그램 이미지<br/>
                                 <input type="checkbox" id="checkbox-2-4" class="checkbox big-checkbox" value="브랜드 소개" onchange="showOptionalTableDiv()"/><label for="checkbox-2-4"></label>브랜드 소개<br/>
                                 <input type="checkbox" id="checkbox-2-5" class="checkbox big-checkbox" value="창업 비용" onchange="showOptionalTableDiv()"/><label for="checkbox-2-5"></label>창업비용<br/>
-                                <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="직접입력" onchange="showOptionalTableDiv()"/><label for="checkbox-2-6"></label>
-                                <input class="const-input-box" type="text" placeholder="직접입력";><br/>
+                                <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="추가하고 싶은 영역이 있을 경우 작성해주세요." onchange="showOptionalTableDiv()"/><label for="checkbox-2-6"></label>추가하고 싶은 영역이 있을 경우 작성해주세요.<br/>
+                                <input class="const-input-box" type="text" style="display: none;" placeholder="추가하고 싶은 영역이 있을 경우 작성해주세요.";><br/>
                             </div>
                         </div>
                     </div>
@@ -278,7 +278,7 @@
                     </div>
                 </div>
             </div>
-             <!-- Step4. 구성 선택2 -->
+            <!-- Step4. 구성 선택2 -->
             <div class="menu-area" style="display: none;">
                 <p class="intro">
                     랜딩페이지에 삽입하고 싶은 영역들을 선택하고<br>
@@ -308,10 +308,10 @@
                         </table>
                     </div>
                     <div class="const-feature" style="display: block;">
-                        <input type="radio" id="radio-5-1" name="feature-radio" class="radio big-radio" value="feature-1" onchange="showFeatureDiv()" />
-                        <label for="radio-5-1"></label>
+                        <input type="checkbox" id="checkbox-5-1" name="feature-checkbox" class="checkbox big-checkbox" value="feature-1" onchange="showFeatureDiv()" />
+                        <label for="checkbox-5-1"></label>
                         특징을 상세하게 글로 표현하고 싶은 경우(2개이상부터 가능)<br/>
-                        <div class="feature-div" id="div-radio-5-1" style="display: none;">
+                        <div class="feature-div" id="div-checkbox-5-1" style="display: none;">
                             <button class="Reference-button">레퍼런스 보기</button>
                             <div class="detail-content">
                                 <p class="basic-text">
@@ -326,10 +326,10 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="radio" id="radio-5-2" name="feature-radio" class="radio big-radio" value="feature-2" onchange="showFeatureDiv()" />
-                        <label for="radio-5-2"></label>
+                        <input type="checkbox" id="checkbox-5-2" name="feature-checkbox" class="checkbox big-checkbox" value="feature-2" onchange="showFeatureDiv()" />
+                        <label for="checkbox-5-2"></label>
                         사진과 짧은 설명글이 있는 경우(2~4개)<br/>
-                        <div class="feature-div" id="div-radio-5-2" style="display: none;">
+                        <div class="feature-div" id="div-checkbox-5-2" style="display: none;">
                             <button class="Reference-button">레퍼런스 보기</button>
                             <div class="detail-content">
                                 <p class="basic-text">
@@ -345,10 +345,10 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="radio" id="radio-5-3" name="feature-radio" class="radio big-radio" value="feature-3" onchange="showFeatureDiv()" />
-                        <label for="radio-5-3"></label>
+                        <input type="checkbox" id="checkbox-5-3" name="feature-checkbox" class="checkbox big-checkbox" value="feature-3" onchange="showFeatureDiv()" />
+                        <label for="checkbox-5-3"></label>
                         단어로 된 여러 특징을 간단히 설명하고 싶은데 하나하나 매칭되는 이미지가 없는 경우(3~9개)<br/>
-                        <div class="feature-div" id="div-radio-5-3" style="display: none;">
+                        <div class="feature-div" id="div-checkbox-5-3" style="display: none;">
                             <button class="Reference-button">레퍼런스 보기</button>
                             <div class="detail-content">
                                 <p class="basic-text">
@@ -362,10 +362,10 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="radio" id="radio-5-4" name="feature-radio" class="radio big-radio" value="feature-4" onchange="showFeatureDiv()" />
-                        <label for="radio-5-4"></label>
+                        <input type="checkbox" id="checkbox-5-4" name="feature-checkbox" class="checkbox big-checkbox" value="feature-4" onchange="showFeatureDiv()" />
+                        <label for="checkbox-5-4"></label>
                         모델 이미지가 있는 경우(4개)<br/>
-                        <div class="feature-div" id="div-radio-5-4" style="display: none;">
+                        <div class="feature-div" id="div-checkbox-5-4" style="display: none;">
                                 <button class="Reference-button">레퍼런스 보기</button>
                                 <div class="detail-content">
                                     <p class="basic-text">
@@ -380,10 +380,10 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="radio" id="radio-5-5" name="feature-radio" class="radio big-radio" value="feature-5" onchange="showFeatureDiv()" />
-                        <label for="radio-5-5"></label>
+                        <input type="checkbox" id="checkbox-5-5" name="feature-checkbox" class="checkbox big-checkbox" value="feature-5" onchange="showFeatureDiv()" />
+                        <label for="checkbox-5-5"></label>
                         사진과 설명글이 있는 경우<br/>
-                        <div class="feature-div" id="div-radio-5-5" style="display: none;">
+                        <div class="feature-div" id="div-checkbox-5-5" style="display: none;">
                             <button class="Reference-button">레퍼런스 보기</button>
                             <div class="detail-content">
                                 <p class="basic-text">
@@ -550,36 +550,40 @@
                     </div>
                     <div class="const-interior" style="display: none;">
                         <div class="img-content">
+                            <div class="radio-style">
+                                <input type="radio" id="radio-8-1" name="review-radio" class="radio big-radio" value="Set1" onchange="showReviewDiv()"/><label for="radio-8-1"></label>
+                                없음
+                            </div>
                             <img class="basic" src="./img/step4/const-interior.png" alt="const-interior">
-                            <p class="basic-text"> 필요자료 : 2000px 이상의 고화질 사진</p>    
+                            <p class="basic-text"> 필요자료 : 2000px 이상의 고화질 사진</p>
                         </div>
                     </div>
                     <div class="const-review" style="display: none;">
-                        <div class="radio-style">
-                            <input type="radio" id="radio-8-1" name="review-radio" class="radio big-radio" value="Set1" onchange="showReviewDiv()"/><label for="radio-8-1"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-8-1" name="review-checkbox" class="checkbox big-checkbox" value="Set1" onchange="showReviewDiv()"/><label for="checkbox-8-1"></label>
                             블로그 리뷰
                         </div>
-                        <div class="review-div" id="div-radio-8-1" style="display: none;">
+                        <div class="review-div" id="div-checkbox-8-1" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-blog.png" alt="review-set1">
                             </div>
                         </div>
-                        <div class="radio-style">
-                            <input type="radio" id="radio-8-2" name="review-radio" class="radio big-radio" value="Set2" onchange="showReviewDiv()"/><label for="radio-8-2"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-8-2" name="review-checkbox" class="checkbox big-checkbox" value="Set2" onchange="showReviewDiv()"/><label for="checkbox-8-2"></label>
                             배달앱 리뷰1
                         </div>
-                        <div class="review-div" id="div-radio-8-2" style="display: none;">
+                        <div class="review-div" id="div-checkbox-8-2" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-review.png" alt="review-set2">
                                 <p class="basic-text"> 필요자료 : 캡쳐 원본이미지 (1000px 이상)<br>
                                     - 내용길이가 비슷한 리뷰들로 캡쳐 요망(들쑥날쑥져서 비어 보임)</p>
                             </div>
                         </div>
-                        <div class="radio-style">
-                            <input type="radio" id="radio-8-3" name="review-radio" class="radio big-radio" value="Set3" onchange="showReviewDiv()"/><label for="radio-8-3"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-8-3" name="review-checkbox" class="checkbox big-checkbox" value="Set3" onchange="showReviewDiv()"/><label for="checkbox-8-3"></label>
                             배달앱 리뷰2
                         </div>
-                        <div class="review-div" id="div-radio-8-3" style="display: none;">
+                        <div class="review-div" id="div-checkbox-8-3" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-review2.png" alt="review-set3">
                                 <p class="basic-text"> 필요자료 : 캡쳐 원본이미지 (1000px 이상)<br>
@@ -588,25 +592,25 @@
                         </div>
                     </div>
                     <div class="const-contact" style="display: none;">
-                        <div class="radio-style">
-                            <input type="radio" id="radio-9-1" name="contact-radio" class="radio big-radio" value="Set1" onchange="showContactDiv()"/><label for="radio-9-1"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-9-1" name="contact-checkbox" class="checkbox big-checkbox" value="checkbox-9-1" onchange="showContactDiv()"/><label for="checkbox-9-1"></label>
                             상담신청<br/>                               
                         </div>
-                        <div class="contact-div" id="div-radio-9-1" style="display: none;">
+                        <div class="contact-div" id="div-checkbox-9-1" style="display: none;">
                             <div class="contact-content">
                                 <img class="basic" src="./img/step4/const-contact.png" alt="const-contact">
                             </div>
                         </div>
-                        <div class="radio-style">
-                            <input type="radio" id="radio-9-2" name="contact-radio" class="radio big-radio" value="Set2" onchange="showContactDiv()"/><label for="radio-9-2"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-9-2" name="contact-checkbox" class="checkbox big-checkbox" value="checkbox-9-2" onchange="showContactDiv()"/><label for="checkbox-9-2"></label>
                             상담신청 하단 스티키<br/>                               
                         </div>
-                        <div class="contact-div" id="div-radio-9-2" style="display: none;">
+                        <div class="contact-div" id="div-checkbox-9-2" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-contact-sticky.png" alt="const-contact-sticky">
                             </div>
                         </div>
-                        <p class="basic-text">* 상단 스티키 메뉴, 상담신청 페이지, 상담신청 스티키 하단바 3개 중 1개만 선택 가능합니다.</p>
+                        <p class="basic-text">* 상단 스티키 메뉴, 상담 신청 하단 바 2개 중 1개 선택가능합니다.</p>
                     </div>
                     <div class="const-affiliate-step" style="display: none;">
                         <div class="radio-style">

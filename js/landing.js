@@ -128,9 +128,15 @@ function changeColor(event) {
 
 // Step4 특징
 function showFeatureDiv() {
-    var selectedRadioId = $('input[name="feature-radio"]:checked').attr('id');
+    var check_arr = [];
     $('.feature-div').hide();
-    $('#div-' + selectedRadioId).show();
+    $('input[class="checkbox big-checkbox"]:checked').each(function() {
+        check_arr.push($(this).attr('id'))
+    })
+    
+    for(var i = 0; i < check_arr.length; i++) {
+        $('#div-' + check_arr[i]).show();
+    }
 }
 
 // Step4 메뉴
@@ -142,9 +148,15 @@ function showMenuDiv() {
 
 // Step4 후기
 function showReviewDiv() {
-    var selectedRadioId = $('input[name="review-radio"]:checked').attr('id');
+    var check_arr = [];
     $('.review-div').hide();
-    $('#div-' + selectedRadioId).show();
+    $('input[name="review-checkbox"]:checked').each(function() {
+        check_arr.push($(this).attr('id'))
+    })
+    
+    for(var i = 0; i < check_arr.length; i++) {
+        $('#div-' + check_arr[i]).show();
+    }
 }
 
 // Step4 가맹절차
@@ -170,9 +182,22 @@ function showYoutubeDiv() {
 
 // Step4 상담신청
 function showContactDiv() {
-    var selectedRadioId = $('input[name="contact-radio"]:checked').attr('id');
+    var check_arr = [];
     $('.contact-div').hide();
-    $('#div-' + selectedRadioId).show();
+    $('input[name="contact-checkbox"]:checked').each(function() {
+        check_arr.push($(this).attr('id'))
+    })
+    
+    for(var i = 0; i < check_arr.length; i++) {
+        $('#div-' + check_arr[i]).show();
+    }
+
+    // var selectedRadioId = $('input[name="contact-checkbox"]:checked').attr('id');
+    // $('.contact-div').hide();
+    // $('#div-' + selectedRadioId).show();
+    // if($('#' + selectedRadioId).is(':checked')){
+    //     $('input[type="checkbox"][name="contact-checkbox"]').prop('checked',false);
+    // }
 }
 
 // Step4 영수증
