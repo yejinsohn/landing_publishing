@@ -187,6 +187,7 @@ label {
 .input-box {
     width: 500px;
     height: 30px;
+    font-size: 16px;
     border : 2px solid #232323;
 }
 input:focus {
