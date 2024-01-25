@@ -28,10 +28,16 @@ section {
     height: 100%;
 }
 .header {
-    font-weight: bold;
-    font-size: 36px;
+    display: block;
+    font-weight: 800;
+    font-size: 1.3em;
     padding: 25px;
     text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.header:hover{
+    opacity:1;
 }
 
 /* Radio */
