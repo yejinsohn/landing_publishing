@@ -45,13 +45,6 @@ function setColorBox() {
     }
 }
 
-// Step2 메인 화면
-function showMainDiv() {
-    var selectedRadioId = $('input[name="main-radio"]:checked').attr('id');
-    $('.main-div').hide();
-    $('#div-' + selectedRadioId).show();
-}
-
 // Step3 구성 선택1 -> 구성 선택2 테이블 출력
 function showOptionalTableDiv() {
     if($('#checkbox-2-6').is(':checked')) {
@@ -131,71 +124,28 @@ function changeColor(event) {
     }
 }
 
-// Step4 특징
-function showFeatureDiv() {
-    var check_arr = [];
-    $('.feature-div').hide();
-    $('input[class="checkbox big-checkbox"]:checked').each(function() {
-        check_arr.push($(this).attr('id'))
+// 체크박스 - 내용 출력 (중복선택 가능)
+// 사용처: Step4 특징, Step4 후기, Step4 매출 그래프
+function duplicableCheckbox(childDivType) {
+    var checkedbox_array = [];
+    $('.' + childDivType + '-div').hide(); // 내용이 들어가있는 div 숨기기.
+
+    $("input[name='" + childDivType + "-checkbox']:checked").each(function() {
+        checkedbox_array.push($(this).attr('id'))
     })
-    
-    for(var i = 0; i < check_arr.length; i++) {
-        $('#div-' + check_arr[i]).show();
+
+    for(var i = 0; i < checkedbox_array.length; i++) {
+        $('#div-' + checkedbox_array[i]).show();
     }
 }
 
-// Step4 메뉴
-function showMenuDiv() {
-    var selectedRadioId = $('input[name="menu-radio"]:checked').attr('id');
-    $('.menu-div').hide();
-    $('#div-' + selectedRadioId).show();
-}
-
-// Step4 후기
-function showReviewDiv() {
-    var check_arr = [];
-    $('.review-div').hide();
-    $('input[name="review-checkbox"]:checked').each(function() {
-        check_arr.push($(this).attr('id'))
-    })
+// 체크박스 - 내용 출력 (중복선택 불가능)
+// 사용처: Step4 상담신청폼, Step4 가맹절차
+function singleCheckbox(checkedbox, childDivType) {
+    $('.' + childDivType + '-div').hide(); // 내용이 들어가있는 div 숨기기.
     
-    for(var i = 0; i < check_arr.length; i++) {
-        $('#div-' + check_arr[i]).show();
-    }
-}
-
-// Step4 가맹절차
-function showStepDiv() {
-    var selectedRadioId = $('input[name="step-radio"]:checked').attr('id');
-    $('.step-div').hide();
-    $('#div-' + selectedRadioId).show();
-}
-
-// Step4 그래프
-function showGraphDiv() {
-    var check_arr = [];
-    $('.graph-div').hide();
-    $('input[name="graph-checkbox"]:checked').each(function() {
-        check_arr.push($(this).attr('id'))
-    })
-    
-    for(var i = 0; i < check_arr.length; i++) {
-        $('#div-' + check_arr[i]).show();
-    }
-}
-
-// Step4 유튜브 영상 재생
-function showYoutubeDiv() {
-    var selectedRadioId = $('input[name="youtube-radio"]:checked').attr('id');
-    $('.youtube-div').hide();
-    $('#div-' + selectedRadioId).show();
-}
-
-// Step4 상담신청
-function showContactDiv(checkedbox) {
-    $('.contact-div').hide();
-    if($(checkedbox).prop('checked')) {
-        $('input[type="checkbox"][name="contact-checkbox"]').prop('checked',false);
+    if($(checkedbox).prop('checked')) { // 체크박스의 체크유무를 확인하여 출력.
+        $("input[type='checkbox'][name='" + childDivType + "-checkbox']").prop('checked',false);
         $(checkedbox).prop('checked',true);
         $('#div-' + $(checkedbox).attr('id')).show();
     } else {
@@ -203,16 +153,10 @@ function showContactDiv(checkedbox) {
     }
 }
 
-// Step4 영수증
-function showReceiptDiv() {
-    var selectedRadioId = $('input[name="receipt-radio"]:checked').attr('id');
-    $('.receipt-div').hide();
-    $('#div-' + selectedRadioId).show();
-}
-
-// Step5 폰트 예시
-function shoFontDiv() {
-    var selectedRadioId = $('input[name="font-radio"]:checked').attr('id');
-    $('.font-div').hide();
+// 라디오버튼-내용 출력
+// 사용처: Step2 메인 화면, Step4 메뉴소개, Step4 영수증, Step4 유튜브 영상, Step4 인스타그램 이미지, Step4 브랜드 소개, Step5 강조 폰트 선택
+function showDivRadio(checkedRadio) {
+    var selectedRadioId = $("input[name='" + checkedRadio + "-radio']:checked").attr('id');
+    $('.' + checkedRadio + '-div').hide();
     $('#div-' + selectedRadioId).show();
 }
