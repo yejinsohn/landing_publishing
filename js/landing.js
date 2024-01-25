@@ -160,3 +160,10 @@ function showDivRadio(checkedRadio) {
     $('.' + checkedRadio + '-div').hide();
     $('#div-' + selectedRadioId).show();
 }
+
+//핸드폰번호 - 자동 입력
+function oninputPhone(target) {
+    target.value = target.value
+        .replace(/[^0-9]/g, '')
+        .replace(/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, "$1-$2-$3");
+}

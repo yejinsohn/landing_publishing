@@ -1,22 +1,37 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-  }
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    letter-spacing: -0.25px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid #444;
+    padding: 30px 0px;
+}
+.cont {
+    min-width: 800px;
+    width: 100%; 
+    height: 100%;
+}
 .header {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: bold;
-    font-size: 30px;
+    font-size: 36px;
     padding: 25px;
     text-align: center;
-}
-.menu-top {
-    background-color: #9d9fa1;
-    width: 100%;
-    height: 30px;
 }
 
 /* Radio */
@@ -56,7 +71,7 @@ html, body {
 }
 .big-radio + label {
 	padding: 16px;
-    margin: 5px;
+    margin: 0.5em 1em 0.5em 0;
     vertical-align: middle;
 }
 .big-radio:checked + label:after {
@@ -104,95 +119,113 @@ label {
 	color: #00a1b7
 }
 .big-checkbox + label {
-	padding: 18px;
-    margin-right: 10px;
-	margin-bottom: 10px;
+	padding: 16px;
+    margin: 0.5em 0.5em 0.5em 0;
 	vertical-align: middle; 
 }
 .big-checkbox:checked + label:after {
-	font-size: 28px;
-	left: 6px;
+	font-size: 24px;
+	left: 4px;
 }
 .checkbox-style {
 	font-size: 16px;
 	align-items: center;
 }
 
-.end{
-    border-bottom: 5px solid #ddd;
-    padding-top: 10px;
-	margin-bottom: 30px;
-    clear: both;
-}
 
 /* menu-box */
 .menu-box .menu-text {
-	max-width: 90%;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: normal;
+    font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
-    color: #656565;
+    color: #555;
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 20px;
     cursor: pointer;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0;
 }
 .menu-box .menu-text .click{
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 700;
     line-height: 20px;
-    color: #f83131;
+    background-color: #00a1b7;
+    color: #fff;
     flex-wrap: wrap;
+    cursor: default;
 }
 .menu {
-    margin: 10px 10px;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+.menu:hover {
+    background-color:#d9eef1;
+    color: #555;
 }
 
 /* form-box */
 .form-box .menu-step {
  	width: 90%;
  	margin: 0 auto;
-	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	font-weight: normal;
 	font-size: 16px;
 }
 .form-box .intro {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: normal;
-    font-size: 20px;
-    color: #444444;
-    text-align: center;
-	margin: 20px;
+    justify-content: left;
+    width: 90%;
+    padding: 24px 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #000;
+    background: #BBE3E8;
+    border-radius: 10px;
+	margin: 30px auto 40px;
+    box-sizing: border-box;
 }
 .form-box .menu-step .select {
-    margin-bottom: 30px;
+    margin-bottom: 2.5em;
 }
 .form-box .menu-step .select-item {
    font-weight: bold;
+   color: #191919;
+   font-size: 18px;
 }
 
 /* step1 */
+input::placeholder{
+    color: #999;
+}
 .input-box {
     width: 500px;
-    height: 30px;
     font-size: 16px;
-    border : 2px solid #232323;
-}
-input:focus {
+    line-height: 150%;
+    height: 50px;
+    padding: 0 16px;
+    border : 1px solid #ddd;
+    border-radius: 8px;
     outline:none;
 }
+
+input:focus {
+    box-shadow: 0 0 0 2px #0CB2C9 inset;
+}
+
+/* 항목 제목 */
+.const-item {
+    font-size: 18px;
+    font-weight: 700;
+    color: #191919;
+}
+
+/* 선택지 컬러 #333 */
+.const-feature, .radio-style {
+    color:#333;
+}
+
 #step1 .input-color {
     width: 100%;
     height: auto;
@@ -252,57 +285,58 @@ input:focus {
 /* step3 */
 #step3 .step3-page {
 	display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
 }
-#step3 .dafault {
-	width: 30%;
-	margin-left: 15%;
+#step3 .default {
+    width: 250px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-right: 20px;
 }
 #step3 ol {
-	width: 100%;
     list-style-position: outside;
     padding-left: 10px;
-	margin-left: 10%;
+	margin-left: 10px;
 	font-size: 16px;
-	line-height: 200%;
+	line-height: 250%;
 }
 #step3 .optional { 
-	width: 60%;
-	margin-left: 15%;	
+    width: 80%;
+	padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;	
 }
-#step3 .const-item {
-	font-size: 16px;
-	font-weight: bold;
-}
-#step3 .input-box {
-    border : 1px solid #232323;
-}
+
+
 #step3 .comment {
-	font-weight: bold;
+	font-weight: medium;
 	color: #f83131;
-    margin-left: 5%;
 }
 
 /* step4 */
 #step4 .select-table {
-	max-width: 90%;
 	margin: 0 auto;
 	display: flex;
+    /*
 	justify-content: center;
-	align-items: center;
-	padding-bottom: 30px;
+	align-items: center;*/
+	padding-bottom: 2em;
 }
 
 #step4 #const-table {
     border-collapse: collapse;
-	margin-top: 20px;
-    width: 80%;
 	text-align: center;
+
 }
 
 #step4 #const-table td {
     border: 1px solid #000;
-    padding: 10px 40px;
+    padding: 20px 40px;
 }
 
 .clickable-cell {
@@ -310,9 +344,16 @@ input:focus {
 	transition: background-color 0.2s;
 }
 
+.clickable-cell:hover{
+    background: #f4f4f4;
+}
 .clicked {
 	color: white;
+    font-weight: 700;
 	background-color: black;
+}
+.clicked:hover {
+    background-color: black;
 }
 
 #step4 .const-img {
@@ -369,17 +410,15 @@ input:focus {
 	width: 50%;
 	font-size: 16px;
 	line-height: 300%;
-	margin-left: 15%;
 }
 #step5 .input-box {
-    width: 70%;
-    border : 1px solid #232323;
+    width: 400px;
 }
 
 /* step6 */
 #step6 .sticky-checkbox {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     /* align-items: flex-start; */
     /* align-items: center; */
 	margin-bottom: 30px;
@@ -387,17 +426,18 @@ input:focus {
 #step6 .checkbox-style {
     font-weight: bold;
 }
+#step6 .step6-cont{
+    margin-top: 12px;
+    margin-left: 6em;
+}
 #step6 .sticky {
-	margin-left: 10%;
-    max-width: 70%;
+    width: 60%;
 }
-#step6 .basic-text {
-    margin-left: 5%;
+#step7 .phonenumber{
+    letter-spacing: 0;
 }
-
 /* text style */
 .basic-text {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: normal;
     font-size: 16px;
     line-height: 150%;
@@ -409,37 +449,58 @@ input:focus {
 
 /* button style */
 .btn {
-	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-weight: normal;
     font-size: 16px;
-	margin-top: 70px;
 	text-align: center;
-}
-.next-btn {
-    display: inline-flex;
-    padding: 10px 50px;
-    color: #fcfcfc;
-    background: #000000;
-    border: none;
-    cursor: pointer;
-	margin-bottom: 20px;
+    margin: 80px auto;
 }
 .pre-btn {
     display: inline-flex;
-    padding: 10px 50px;
-    color: #fcfcfc;
-    background: #000000;
-    border: none;
+    padding: 20px 50px;
+    font-weight: 600;
+    color: #222;
+    border: 1px solid #222;
+    border-radius: 8px;
     cursor: pointer;
-	margin-right: 3px;
-	margin-bottom: 20px;
+	margin-right: 24px;
+    opacity: 0.9;
 }
+.next-btn {
+    display: inline-flex;
+    padding: 20px 50px;
+    color: #fcfcfc;
+    font-weight: 600;
+    background: #222;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.next-btn.inactive{
+    opacity:0.5;
+    cursor:default;
+}
+.next-btn.inactive:hover{
+    opacity:0.5;
+}
+
+.pre-btn:hover, .next-btn:hover {
+    opacity: 1;
+}
+.pre-btn:hover{
+    background: #f7f7f7;
+}
+
 .submit-btn {
     display: inline-flex;
-    padding: 10px 50px;
-    color: #fcfcfc;
-    background: #000000;
+    padding: 20px 50px;
+    color: #fff;
+    background: #0CB2C9;
     border: none;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
-	margin-bottom: 20px;
+    transition: 0.2s;
+}
+.submit-btn:hover{
+    background: #00a1b7
 }
