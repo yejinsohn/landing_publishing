@@ -192,23 +192,15 @@ function showYoutubeDiv() {
 }
 
 // Step4 상담신청
-function showContactDiv() {
-    var check_arr = [];
+function showContactDiv(checkedbox) {
     $('.contact-div').hide();
-    $('input[name="contact-checkbox"]:checked').each(function() {
-        check_arr.push($(this).attr('id'))
-    })
-    
-    for(var i = 0; i < check_arr.length; i++) {
-        $('#div-' + check_arr[i]).show();
+    if($(checkedbox).prop('checked')) {
+        $('input[type="checkbox"][name="contact-checkbox"]').prop('checked',false);
+        $(checkedbox).prop('checked',true);
+        $('#div-' + $(checkedbox).attr('id')).show();
+    } else {
+        $(checkedbox).prop('checked',false);
     }
-
-    // var selectedRadioId = $('input[name="contact-checkbox"]:checked').attr('id');
-    // $('.contact-div').hide();
-    // $('#div-' + selectedRadioId).show();
-    // if($('#' + selectedRadioId).is(':checked')){
-    //     $('input[type="checkbox"][name="contact-checkbox"]').prop('checked',false);
-    // }
 }
 
 // Step4 영수증
