@@ -52,8 +52,13 @@ function showMainDiv() {
     $('#div-' + selectedRadioId).show();
 }
 
-// Step4 구성 선택2
+// Step3 구성 선택1 -> 구성 선택2 테이블 출력
 function showOptionalTableDiv() {
+    if($('#checkbox-2-6').is(':checked')) {
+        $('#step3 .input-box').show();
+    } else {
+        $('#step3 .input-box').hide();
+    }
     var check_arr = [];
     $('.optional-td').hide();
     $('input[class="checkbox big-checkbox"]:checked').each(function() {
@@ -168,9 +173,15 @@ function showStepDiv() {
 
 // Step4 그래프
 function showGraphDiv() {
-    var selectedRadioId = $('input[name="graph-radio"]:checked').attr('id');
+    var check_arr = [];
     $('.graph-div').hide();
-    $('#div-' + selectedRadioId).show();
+    $('input[name="graph-checkbox"]:checked').each(function() {
+        check_arr.push($(this).attr('id'))
+    })
+    
+    for(var i = 0; i < check_arr.length; i++) {
+        $('#div-' + check_arr[i]).show();
+    }
 }
 
 // Step4 유튜브 영상 재생

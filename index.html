@@ -45,14 +45,9 @@
                     </div>
                     <div class="select">
                         <p>
-                            <span class="select-item">2. 랜딩페이지에 사용 원하시는 컬러톤을 선택해주세요.</span>
+                            <span class="select-item">2. 원하시는 색상 조합을 말씀해주세요.(EX. 검노 조합, 빨파 조합)</span>
                         </p>
-                        <div class="input-color">
-                            <input class="color-box" type="color" id="color-box-1" style="display: block;">
-                            <input class="color-box" type="color" id="color-box-2" style="display: none;">
-                            <input class="color-box" type="color" id="color-box-3" style="display: none;">
-                            <div class="color-plus" onclick="setColorBox()"><img src="./img/plus-icon.png"></div>
-                        </div>
+                        <input class="input-box" type="text" placeholder="원하시는 색상 조합을 입력해주세요.";>
                     </div>
                     <div class="select">
                         <p class="select-item">3. 고객에게 강조하고 싶은 이미지를 선택해주세요.</p>
@@ -267,7 +262,7 @@
                                 <input type="checkbox" id="checkbox-2-4" class="checkbox big-checkbox" value="브랜드 소개" onchange="showOptionalTableDiv()"/><label for="checkbox-2-4"></label>브랜드 소개<br/>
                                 <input type="checkbox" id="checkbox-2-5" class="checkbox big-checkbox" value="창업 비용" onchange="showOptionalTableDiv()"/><label for="checkbox-2-5"></label>창업비용<br/>
                                 <input type="checkbox" id="checkbox-2-6" class="checkbox big-checkbox" value="추가하고 싶은 영역이 있을 경우 작성해주세요." onchange="showOptionalTableDiv()"/><label for="checkbox-2-6"></label>추가하고 싶은 영역이 있을 경우 작성해주세요.<br/>
-                                <input class="const-input-box" type="text" style="display: none;" placeholder="추가하고 싶은 영역이 있을 경우 작성해주세요.";><br/>
+                                <input class="input-box" type="text" style="display: none;" placeholder="추가하고 싶은 영역이 있을 경우 작성해주세요.";><br/>
                             </div>
                         </div>
                     </div>
@@ -477,14 +472,12 @@
                                     (ex. 메뉴이름정리.doc -> hwp 파일 맥용호환 안되므로 사용 불가(DSC0127.JPG - 간장게장 정식, DSC0128.JPG - 양념게장 정식))
                                 </p>
                                 <div class="const-img">
-                                    <img class="mobile" src="./img/step4/const-menu4-mobile.png" alt="menu4-mobile">
-                                    <img class="basic" src="./img/step4/const-menu4.png" alt="menu4">
                                 </div>
                             </div>
                         </div>
                         <input type="radio" id="radio-6-5" name="menu-radio" class="radio big-radio" value="menu-5" onchange="showMenuDiv()" />
                         <label for="radio-6-5"></label>
-                        메뉴하나하나를 강조하고 싶은 경우, 카테고리가 나뉜 경우 pc에서는 임팩트 있으나, 모바일에선 반대로 작용</br>
+                        메뉴하나하나를 강조하고 싶은 경우</br>
                         <div class="menu-div" id="div-radio-6-5" style="display: none;">
                             <button class="Reference-button">레퍼런스 보기</button>
                             <div class="detail-content">
@@ -660,41 +653,45 @@
                                     필요자료 : 10자이내 단계별 제목
                                 </p>
                             </div>
-                        </div>  
+                        </div>
+                        <div class="radio-style">
+                            <input type="radio" id="radio-10-5" name="step-radio" class="radio big-radio" value="Set5" onchange="showStepDiv()"/><label for="radio-10-5"></label>
+                            기타<br/>                               
+                        </div>
                     </div>
                     <div class="const-graph" style="display: none;">
-                        <div class="radio-style">
-                            <input type="radio" id="radio-11-1" name="graph-radio" class="radio big-radio" value="pie" onchange="showGraphDiv()"/><label for="radio-11-1"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-11-1" name="graph-checkbox" class="checkbox big-checkbox" value="pie" onchange="showGraphDiv()"/><label for="checkbox-11-1"></label>
                             원형 그래프<br/>                               
                         </div>
-                        <div class="graph-div" id="div-radio-11-1" style="display: none;">
+                        <div class="graph-div" id="div-checkbox-11-1" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-graph-pie.png" alt="const-graph-pie">
                             </div>
                         </div>
-                        <div class="radio-style">
-                            <input type="radio" id="radio-11-2" name="graph-radio" class="radio big-radio" value="column" onchange="showGraphDiv()"/><label for="radio-11-2"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-11-2" name="graph-checkbox" class="checkbox big-checkbox" value="column" onchange="showGraphDiv()"/><label for="checkbox-11-2"></label>
                             막대 그래프<br/>                               
                         </div>
-                        <div class="graph-div" id="div-radio-11-2" style="display: none;">
+                        <div class="graph-div" id="div-checkbox-11-2" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-graph-column.png" alt="const-graph-column">
                             </div>
                         </div>
-                        <div class="radio-style">
-                            <input type="radio" id="radio-11-3" name="graph-radio" class="radio big-radio" value="growth" onchange="showGraphDiv()"/><label for="radio-11-3"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-11-3" name="graph-checkbox" class="checkbox big-checkbox" value="growth" onchange="showGraphDiv()"/><label for="checkbox-11-3"></label>
                             성장 그래프<br/>                               
                         </div>
-                        <div class="graph-div" id="div-radio-11-3" style="display: none;">
+                        <div class="graph-div" id="div-checkbox-11-3" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-graph-growth.png" alt="const-graph-growth">
                             </div>
                         </div>
-                        <div class="radio-style">
-                            <input type="radio" id="radio-11-4" name="graph-radio" class="radio big-radio" value="cost" onchange="showGraphDiv()"/><label for="radio-11-4"></label>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-11-4" name="graph-checkbox" class="checkbox big-checkbox" value="cost" onchange="showGraphDiv()"/><label for="checkbox-11-4"></label>
                             단가 비교<br/>                               
                         </div>
-                        <div class="graph-div" id="div-radio-11-4" style="display: none;">
+                        <div class="graph-div" id="div-checkbox-11-4" style="display: none;">
                             <div class="img-content">
                                 <img class="basic" src="./img/step4/const-cost.png" alt="const-cost">
                             </div>
@@ -777,7 +774,7 @@
                             <input type="radio" id="radio-4-4" name="font-radio" class="radio big-radio" value="견고한" onchange="shoFontDiv()"/><label for="radio-4-4"></label>견고한<br/>
                             <input type="radio" id="radio-4-5" name="font-radio" class="radio big-radio" value="친근한" onchange="shoFontDiv()"/><label for="radio-4-5"></label>친근한<br/>
                             <input type="radio" id="radio-4-6" name="font-radio" class="radio big-radio" value="직접입력" onchange="shoFontDiv()"/><label for="radio-4-6"></label>
-                                <input class="font-input-box" type="text" placeholder="직접입력";><br/>
+                            <input class="input-box" type="text" placeholder="직접입력";><br/>
                         </div>
                     </div>
                     <div class="btn">

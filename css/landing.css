@@ -274,10 +274,7 @@ input:focus {
 	font-size: 16px;
 	font-weight: bold;
 }
-#step3 .const-input-box {
-	font-size: 16px;
-	width: 500px;
-    height: 30px;
+#step3 .input-box {
     border : 1px solid #232323;
 }
 #step3 .comment {
@@ -369,16 +366,14 @@ input:focus {
 	display: flex;
 }
 #step5 .font-radio-style {
-	width: 30%;
+	width: 50%;
 	font-size: 16px;
 	line-height: 300%;
 	margin-left: 15%;
 }
-#step5 .font-input-box {
-	width: 80px;
-    height: 30px;
+#step5 .input-box {
+    width: 70%;
     border : 1px solid #232323;
-	font-size: 16px;
 }
 
 /* step6 */
