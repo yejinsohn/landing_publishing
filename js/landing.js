@@ -17,9 +17,11 @@ function next(idx){
     $(".form-box .menu-area").hide();
     $(".form-box .menu-area").eq(idx + 1).show();
 
-    //Menu Event
+    //Menu Event Step 활성화
     $(".menu-box .menu").removeClass("click");
     $(".menu-box .menu").eq(idx + 1).addClass("click");
+
+    checkEmpty();
 }
 
 function prev(idx){
@@ -31,18 +33,9 @@ function prev(idx){
     $(".menu-box .menu").eq(idx - 1).addClass("click");
 }
 
-// Step1 컬러톤 추가
-function setColorBox() {
-    var colorBox2 = $('#color-box-2');
-    var colorBox3 = $('#color-box-3');
-    var setcolor = $('.color-plus');
-
-    if (colorBox2.css('display') === 'none') {
-        colorBox2.show();
-    } else if (colorBox2.css('display') === 'block') {
-        colorBox3.show();
-        setcolor.hide();
-    }
+function checkEmpty() {
+    const inputclass = $('#step1 .input-box').val();
+    console.log(inputclass);
 }
 
 // Step3 구성 선택1 -> 구성 선택2 테이블 출력
@@ -98,7 +91,7 @@ function changeColor(event) {
             case '가맹절차':
                 document.querySelector('.const-affiliate-step').style.display = 'block';
                 break;
-            case '매출 그래프':
+            case '그래프':
                 document.querySelector('.const-graph').style.display = 'block';
                 break;
             case '유튜브 영상':
@@ -125,7 +118,7 @@ function changeColor(event) {
 }
 
 // 체크박스 - 내용 출력 (중복선택 가능)
-// 사용처: Step4 특징, Step4 후기, Step4 매출 그래프
+// 사용처: Step4 특징, Step4 후기, Step4 그래프
 function duplicableCheckbox(childDivType) {
     var checkedbox_array = [];
     $('.' + childDivType + '-div').hide(); // 내용이 들어가있는 div 숨기기.
@@ -153,7 +146,7 @@ function singleCheckbox(checkedbox, childDivType) {
     }
 }
 
-// 라디오버튼-내용 출력
+// 라디오버튼 - 내용 출력
 // 사용처: Step2 메인 화면, Step4 메뉴소개, Step4 영수증, Step4 유튜브 영상, Step4 인스타그램 이미지, Step4 브랜드 소개, Step5 강조 폰트 선택
 function showDivRadio(checkedRadio) {
     var selectedRadioId = $("input[name='" + checkedRadio + "-radio']:checked").attr('id');
