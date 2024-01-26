@@ -439,6 +439,7 @@ input:focus {
 }
 #step6 .checkbox-style {
     font-weight: bold;
+    width: 6em;
 }
 #step6 .step6-cont{
     margin-top: 12px;
