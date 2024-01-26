@@ -52,11 +52,46 @@
                         <div class="select">
                             <p class="select-item">3. 고객에게 강조하고 싶은 이미지를 선택해주세요.</p>
                             <div class="radio-style">
-                                <input type="radio" id="radio-1-1" name="image-radio" class="radio big-radio" value="고객 중심"/><label for="radio-1-1"></label>고객 중심<br/>       
-                                <input type="radio" id="radio-1-2" name="image-radio" class="radio big-radio" value="메뉴 중심"/><label for="radio-1-2"></label>메뉴 중심<br/>
-                                <input type="radio" id="radio-1-3" name="image-radio" class="radio big-radio" value="매출 중심"/><label for="radio-1-3"></label>매출 중심<br/>
-                                <input type="radio" id="radio-1-4" name="image-radio" class="radio big-radio" value="브랜드 중심"/><label for="radio-1-4"></label>브랜드 중심<br/>
-                                <input type="radio" id="radio-1-5" name="image-radio" class="radio big-radio" value="혜택 중심"/><label for="radio-1-5"></label>혜택 중심<br/>                        
+                                <input type="radio" id="radio-1-1" name="image-radio" class="radio big-radio" value="고객 중심" onchange="showDivRadio('image')"/><label for="radio-1-1"></label>고객 중심<br/>
+                                <div class="image-div" id="div-radio-1-1" style="display: none;">
+                                    <div class="detail-content">
+                                        <p class="basic-text">
+                                            고객 리뷰 영역이 우선적으로 노출될 수 있게 개발됩니다.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <input type="radio" id="radio-1-2" name="image-radio" class="radio big-radio" value="메뉴 중심" onchange="showDivRadio('image')"/><label for="radio-1-2"></label>메뉴 중심<br/>
+                                <div class="image-div" id="div-radio-1-2" style="display: none;">
+                                    <div class="detail-content">
+                                        <p class="basic-text">
+                                            메뉴 혹은 메뉴의 특장점을 우선적으로 노출될 수 있게 개발됩니다. <br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <input type="radio" id="radio-1-3" name="image-radio" class="radio big-radio" value="매출 중심" onchange="showDivRadio('image')"/><label for="radio-1-3"></label>매출 중심<br/>
+                                <div class="image-div" id="div-radio-1-3" style="display: none;">
+                                    <div class="detail-content">
+                                        <p class="basic-text">
+                                            매출 영수증 또는 매출 상승 그래프들을 활용하여 우선적으로 노출될 수 있게 개발됩니다.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <input type="radio" id="radio-1-4" name="image-radio" class="radio big-radio" value="브랜드 중심" onchange="showDivRadio('image')"/><label for="radio-1-4"></label>브랜드 중심<br/>
+                                <div class="image-div" id="div-radio-1-4" style="display: none;">
+                                    <div class="detail-content">
+                                        <p class="basic-text">
+                                            브랜드의 특장점을 우선적으로 노출될 수 있게 개발됩니다.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <input type="radio" id="radio-1-5" name="image-radio" class="radio big-radio" value="혜택 중심" onchange="showDivRadio('image')"/><label for="radio-1-5"></label>혜택 중심<br/>
+                                <div class="image-div" id="div-radio-1-5" style="display: none;">
+                                    <div class="detail-content">
+                                        <p class="basic-text">
+                                            가맹계약을 할 경우 어떤 혜택을 받을 지 우선적으로 노출될 수 있게 개발됩니다.<br>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="btn">
