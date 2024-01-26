@@ -147,7 +147,7 @@ function singleCheckbox(checkedbox, childDivType) {
 }
 
 // 라디오버튼 - 내용 출력
-// 사용처: Step2 메인 화면, Step4 메뉴소개, Step4 영수증, Step4 유튜브 영상, Step4 인스타그램 이미지, Step4 브랜드 소개, Step5 강조 폰트 선택
+// 사용처: Step2 메인 화면, Step4 메뉴 소개, Step4 영수증, Step4 유튜브 영상, Step4 인스타그램 이미지, Step4 브랜드 소개, Step5 강조 폰트 선택
 function showDivRadio(checkedRadio) {
     var selectedRadioId = $("input[name='" + checkedRadio + "-radio']:checked").attr('id');
     $('.' + checkedRadio + '-div').hide();
