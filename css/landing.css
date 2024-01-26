@@ -8,7 +8,9 @@ html, body {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     letter-spacing: -0.25px;
 }
-
+body {
+    background-color: #f9f9f9;
+}
 section {
     display: flex;
     flex-direction: row;
@@ -17,15 +19,19 @@ section {
 }
 
 .left {
-    width: 300px;
+    position:fixed;
+    width: 250px;
     height: 100%;
-    border-right: 1px solid #444;
-    padding: 30px 0px;
+    padding: 20px 0px;
+    background-color: #fff;
+    box-shadow: 2px 0px 8px rgba(0,0,0,0.04);
+    z-index: 9;
 }
 .cont {
     min-width: 800px;
     width: 100%; 
     height: 100%;
+    margin-left:250px;
 }
 .header {
     display: block;
@@ -35,6 +41,8 @@ section {
     text-align: center;
     cursor: pointer;
     opacity: 0.8;
+    color: #191919;
+    text-decoration: none;
 }
 .header:hover{
     opacity:1;
@@ -45,7 +53,7 @@ section {
 	display: none;
 }
 .radio + label {
-	background-color: #fafafa;
+	background-color: #fff;
 	border: 1px solid #cacece;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 9px;
@@ -99,7 +107,7 @@ label {
 	display: none;
 }
 .checkbox + label {
-	background-color: #fafafa;
+	background-color: #fff;
 	border: 1px solid #cacece;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 9px;
@@ -265,7 +273,7 @@ input:focus {
     color: #333;
     font-weight: 600;
     border: 2px solid #333;
-    background: transparent;
+    background: #fff;
     border-radius: 8px;
     font-size: 16px;
     margin: 20px 0;
@@ -303,7 +311,8 @@ input:focus {
 }
 #step3 .default {
     width: 250px;
-    background: #f4f4f4;
+    background: #efefef;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px 20px;
     margin-right: 20px;
@@ -320,6 +329,7 @@ input:focus {
 	padding: 10px 20px;
     border-radius: 8px;
     border: 1px solid #ddd;	
+    background-color: #fff;
 }
 
 
@@ -330,12 +340,12 @@ input:focus {
 
 /* step4 */
 #step4 .select-table {
-	margin: 0 auto;
-	display: flex;
-    /*
-	justify-content: center;
-	align-items: center;*/
-	padding-bottom: 2em;
+    display: inline-block;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+	margin-bottom: 2em;
+    background-color: #fff;
 }
 
 #step4 #const-table {
@@ -345,8 +355,11 @@ input:focus {
 }
 
 #step4 #const-table td {
-    border: 1px solid #000;
+    border-right: 1px solid #444;
     padding: 20px 40px;
+}
+#step4 #const-table td:last-child{
+    border-right: 0;
 }
 
 .clickable-cell {
@@ -434,6 +447,7 @@ input:focus {
 }
 #step6 .checkbox-style {
     font-weight: bold;
+    width: 6em;
 }
 #step6 .step6-cont{
     margin-top: 12px;
@@ -460,7 +474,8 @@ input:focus {
 .btn {
     font-size: 16px;
 	text-align: center;
-    margin: 80px auto;
+    margin: 80px auto 0;
+    padding-bottom: 80px;
 }
 .pre-btn {
     display: inline-flex;
