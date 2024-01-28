@@ -1,11 +1,11 @@
+var pageIndex = 0;
+
 $(document).ready(function () {
     changeMenu(($(".menu-box .menu").index()));
 
     $(".menu-box .menu").click(function () {
         changeMenu($(this).index()); // 클릭한 메뉴의 index 전달
     });
-
-    checkInputs();
 
     // text 타입 input과 radio 타입 input이 변화할 때마다 checkInputs 함수 호출
     for (let index = 1; index <= $(".menu-box .menu").length; index++) {
@@ -23,7 +23,8 @@ function changeMenu(index) {
     $(".form-box .menu-area").hide();
     $(".form-box .menu-area").eq(index).show();
 
-    getInputs(index + 1);
+    pageIndex = index + 1;
+    getInputs(pageIndex);
 }
 
 // 해당 menu에 존재하는 input의 종류를 가져옴.
@@ -45,6 +46,10 @@ function getInputs(index) {
         if (index != 3 && index != 6) {
             $(this).addClass("activate");
         }
+    })
+
+    $('.Reference-button').each(function() {
+        $(this).removeClass("activate");
     })
 
     if ($('#checkbox-2-6').is(':checked')) {
@@ -69,41 +74,69 @@ function getInputs(index) {
 // step6 : 스티키바
 // step7 : 담당자명, 휴대폰번호, 이메일주소
 function checkInputs() {
-    var allTextInputsFilled = true;
-    var oneRadioChecked = false;
-    var oneCheckboxChecked = false;
-
     // 각 text 타입 input을 확인하며 값이 비어있는지 여부를 확인
-    $('#step' + ($(".menu-box .menu").index() + 1) + ' .input-box').each(function () {
-        if ($(this).val() === '') {
-            allTextInputsFilled = false;
+    $('#step' + pageIndex + ' .input-box').each(function () {
+        if (!$(this).is(":hidden")) { // step3의 추가사항 같은 입력하지 않아도 되는 숨겨진 텍스트 필드 예외 방지
+            if ($(this).val() === '') { // 아무 값도 없을 때
+                $(this).addClass("activate");
+            } else {
+                $(this).removeClass("activate");
+            }
         }
     });
     
     // radio 타입 input 중 하나만 체크되어 있는지 확인
-    $('#step' + ($(".menu-box .menu").index() + 1) + ' .radio').each(function () {
-        if ($(this).prop('checked')) {
-            oneRadioChecked = true;
+    $('#step' + pageIndex+ ' .radio').each(function () {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+            return false;
+        } else {
+            $(this).addClass("activate");
         }
     });
     
-    $('#step' + ($(".menu-box .menu").index() + 1) + ' .checkbox').each(function () {
-        if ($(this).prop('checked')) {
-            oneCheckboxChecked = true;
+    // checkbox 타입 input 중 하나만 체크되어 있는지 확인
+    $('#step' + pageIndex + ' .checkbox').each(function () {
+        if (pageIndex != 3 && pageIndex != 6) {
+            if ($(this).prop('checked')) {
+                $(this).removeClass("activate");
+                $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+                return false;
+            } else {
+                $(this).addClass("activate");
+            }
         }
     });
-    
-    console.log(allTextInputsFilled);
-    console.log(oneRadioChecked);
-    console.log(oneCheckboxChecked);
+
+    // 버튼 활성화/비활성화
+    $($('#step' + pageIndex + ' :input')).each(function() {
+        if($(this).hasClass("activate") === true) { // activate 클래스가 있다면, 즉 입력 안한 칸이 있다면
+            $('.next-btn').attr('onclick', '').unbind('click');
+            $(".next-btn").addClass("inactive");
+            return false;
+        } else {
+            $('.next-btn').attr("onclick", "changeMenu(" + pageIndex + ")");
+            $(".next-btn").removeClass("inactive");
+        }
+    });
+
+    // if ($('#step' + ($(".menu-box .menu").index() + 1) + ' :input').hasClass("activate") === true) {
+    //     console.log($('#step' + ($(".menu-box .menu").index() + 1) + ' :input').hasClass("activate"));
+    //     $('.next-btn').attr('onclick', '').unbind('click');
+    //     $(".next-btn").addClass("inactive");
+    // } else {
+    //     $('.next-btn').attr("onclick", "changeMenu(" + ($(".menu-box .menu").index() + 1) + ")");
+    //     $(".next-btn").removeClass("inactive");
+    // }
+
     // 모든 text 타입 input이 채워져 있고, radio 타입 input 중 하나만 체크되어 있으면 버튼 활성화
-    if ((allTextInputsFilled && oneRadioChecked && oneCheckboxChecked)) {
-        $('.next-btn').attr("onclick", "changeMenu(" + ($(".menu-box .menu").index() + 1) + ")");
-        $(".next-btn").removeClass("inactive");
-    } else {
-        $('.next-btn').attr('onclick', '').unbind('click');
-        $(".next-btn").addClass("inactive");
-    }
+    // if ((allTextInputsFilled && oneRadioChecked && oneCheckboxChecked)) {
+    //     $('.next-btn').attr("onclick", "changeMenu(" + ($(".menu-box .menu").index() + 1) + ")");
+    //     $(".next-btn").removeClass("inactive");
+    // } else {
+    //     $('.next-btn').attr('onclick', '').unbind('click');
+    //     $(".next-btn").addClass("inactive");
+    // }
 }
 
 // Step3 구성 선택1 -> 구성 선택2 테이블 출력
