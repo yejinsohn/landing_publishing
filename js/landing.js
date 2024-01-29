@@ -43,7 +43,7 @@ function getInputs(index) {
     $('#step' + index + ' :input').each(function() {
         // 예외 경우: step3, 6은 선택사항 체크 안해도 다음으로 넘어갈 수 있음.
         // 예외 경우: step3은 추가영역의 텍스트를 작성 안해도 가능하게 해야함.
-        if (index != 3 && index != 6) {
+        if (index != 3 && index != 4 && index != 6) {
             $(this).addClass("activate");
         }
     })
@@ -52,13 +52,19 @@ function getInputs(index) {
         $(this).removeClass("activate");
     })
 
+    $('#checkbox-7-4').each(function() {
+        $(this).removeClass("activate");
+    })
+
     if ($('#checkbox-2-6').is(':checked')) {
         $('#step3 .input-box').addClass("activate");
     }
 
-    // $('#step4 :input').each(function(intdex) {
-    //     console.log($(this).attr('name'));
-    // })
+    if ($('#radio-4-6').is(':checked')) {
+        $('#step5 .input-box').addClass("activate");
+    } else {
+        $('#step5 .input-box').removeClass("activate");
+    }
 
     checkInputs();
 }
@@ -86,10 +92,20 @@ function checkInputs() {
     });
     
     // radio 타입 input 중 하나만 체크되어 있는지 확인
-    $('#step' + pageIndex+ ' .radio').each(function () {
+    $('#step' + pageIndex + ' .radio').each(function () {
         if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
-            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
-            return false;
+            if ($(this).is('#radio-4-6')) { // Step5. 강조 폰트 선택 직접 입력
+                $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+                if ($('#step5 .input-box').val() === '') {
+                    $('#step5 .input-box').addClass("activate");
+                } else {
+                    $('#step5 .input-box').removeClass("activate");
+                }
+            } else {
+                $('#step5 .input-box').removeClass("activate");
+                $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+                return false;
+            }
         } else {
             $(this).addClass("activate");
         }
@@ -107,6 +123,84 @@ function checkInputs() {
             }
         }
     });
+
+    $('#const-table .optional-td').each(function () {
+        if ($(this).is(':hidden')) {
+            $("input[name='" + $('#const-table .optional-td').attr('name') + "']").each(function () {
+                $(this).removeClass("activate");
+            });
+        }
+    });
+
+    $("input:radio[name='menu-radio']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:radio[name='receipt-radio']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:radio[name='youtube-radio']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:radio[name='insta-radio']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:radio[name='brand-radio']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:checkbox[name='feature-checkbox']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:checkbox[name='interior-checkbox']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:checkbox[name='review-checkbox']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:checkbox[name='contact-checkbox']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $("input:checkbox[name='step-checkbox']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+    
+    $("input:checkbox[name='graph-checkbox']").each(function() {
+        if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
+            $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
+        }
+    })
+
+    $('#checkbox-7-4').each(function() {
+        $(this).removeClass("activate");
+    })
 
     // 버튼 활성화/비활성화
     $($('#step' + pageIndex + ' :input')).each(function() {
@@ -217,6 +311,7 @@ function changeColor(event) {
             cell.classList.remove('clicked');
         });
         target.classList.add('clicked');
+        checkInputs();
     }
 }
 

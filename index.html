@@ -53,40 +53,40 @@
                         <div class="select">
                             <p class="select-item">3. 고객에게 강조하고 싶은 이미지를 선택해주세요.</p>
                             <div class="radio-style">
-                                <input type="radio" id="radio-1-1" name="image-radio" class="radio big-radio" value="고객 중심" onchange="showDivRadio('image')"/><label for="radio-1-1"></label>고객 중심<br/>
-                                <div class="image-div" id="div-radio-1-1" style="display: none;">
+                                <input type="radio" id="radio-1-1" name="image-radio" class="radio big-radio" value="고객 중심"/><label for="radio-1-1"></label>고객 중심<br/>
+                                <div class="image-div" id="div-radio-1-1">
                                     <div class="detail-content">
                                         <p class="basic-text">
                                             고객 리뷰 영역이 우선적으로 노출될 수 있게 개발됩니다.<br>
                                         </p>
                                     </div>
                                 </div>
-                                <input type="radio" id="radio-1-2" name="image-radio" class="radio big-radio" value="메뉴 중심" onchange="showDivRadio('image')"/><label for="radio-1-2"></label>메뉴 중심<br/>
-                                <div class="image-div" id="div-radio-1-2" style="display: none;">
+                                <input type="radio" id="radio-1-2" name="image-radio" class="radio big-radio" value="메뉴 중심"/><label for="radio-1-2"></label>메뉴 중심<br/>
+                                <div class="image-div" id="div-radio-1-2">
                                     <div class="detail-content">
                                         <p class="basic-text">
                                             메뉴 혹은 메뉴의 특장점을 우선적으로 노출될 수 있게 개발됩니다. <br>
                                         </p>
                                     </div>
                                 </div>
-                                <input type="radio" id="radio-1-3" name="image-radio" class="radio big-radio" value="매출 중심" onchange="showDivRadio('image')"/><label for="radio-1-3"></label>매출 중심<br/>
-                                <div class="image-div" id="div-radio-1-3" style="display: none;">
+                                <input type="radio" id="radio-1-3" name="image-radio" class="radio big-radio" value="매출 중심"/><label for="radio-1-3"></label>매출 중심<br/>
+                                <div class="image-div" id="div-radio-1-3">
                                     <div class="detail-content">
                                         <p class="basic-text">
                                             매출 영수증 또는 매출 상승 그래프들을 활용하여 우선적으로 노출될 수 있게 개발됩니다.<br>
                                         </p>
                                     </div>
                                 </div>
-                                <input type="radio" id="radio-1-4" name="image-radio" class="radio big-radio" value="브랜드 중심" onchange="showDivRadio('image')"/><label for="radio-1-4"></label>브랜드 중심<br/>
-                                <div class="image-div" id="div-radio-1-4" style="display: none;">
+                                <input type="radio" id="radio-1-4" name="image-radio" class="radio big-radio" value="브랜드 중심"/><label for="radio-1-4"></label>브랜드 중심<br/>
+                                <div class="image-div" id="div-radio-1-4">
                                     <div class="detail-content">
                                         <p class="basic-text">
                                             브랜드의 특장점을 우선적으로 노출될 수 있게 개발됩니다.<br>
                                         </p>
                                     </div>
                                 </div>
-                                <input type="radio" id="radio-1-5" name="image-radio" class="radio big-radio" value="혜택 중심" onchange="showDivRadio('image')"/><label for="radio-1-5"></label>혜택 중심<br/>
-                                <div class="image-div" id="div-radio-1-5" style="display: none;">
+                                <input type="radio" id="radio-1-5" name="image-radio" class="radio big-radio" value="혜택 중심"/><label for="radio-1-5"></label>혜택 중심<br/>
+                                <div class="image-div" id="div-radio-1-5">
                                     <div class="detail-content">
                                         <p class="basic-text">
                                             가맹계약을 할 경우 어떤 혜택을 받을 지 우선적으로 노출될 수 있게 개발됩니다.<br>
@@ -326,10 +326,10 @@
                                     <td class="clickable-cell">가맹절차</td>
                                 </tr>
                                 <tr>
-                                    <td class="clickable-cell optional-td" id="td-checkbox-2-1" style="display: none;">그래프</td>
-                                    <td class="clickable-cell optional-td" id="td-checkbox-2-2" style="display: none;">유튜브 영상</td>
-                                    <td class="clickable-cell optional-td" id="td-checkbox-2-3" style="display: none;">인스타그램 이미지</td>
-                                    <td class="clickable-cell optional-td" id="td-checkbox-2-4" style="display: none;">브랜드 소개</td>
+                                    <td class="clickable-cell optional-td" name="graph-checkbox" id="td-checkbox-2-1" style="display: none;">그래프</td>
+                                    <td class="clickable-cell optional-td" name="youtube-radio" id="td-checkbox-2-2" style="display: none;">유튜브 영상</td>
+                                    <td class="clickable-cell optional-td" name="insta-radio" id="td-checkbox-2-3" style="display: none;">인스타그램 이미지</td>
+                                    <td class="clickable-cell optional-td" name="brand-radio" id="td-checkbox-2-4" style="display: none;">브랜드 소개</td>
                                     <td class="clickable-cell optional-td" id="td-checkbox-2-5" style="display: none;">창업 비용</td>
                                     <td style="display: none;"></td>
                                 </tr>
@@ -432,7 +432,7 @@
                         </div>
 
                         <!-- step4 - 메뉴소개 -->
-                        <div class="const-menu" style="display: none;">
+                        <div class="step4-radio const-menu" style="display: none;">
                             <input type="radio" id="radio-6-1" name="menu-radio" class="radio big-radio" value="menu-1" onchange="showDivRadio('menu')" />
                             <label for="radio-6-1"></label>
                             메인, 사이드 메뉴가 나뉘어져 있는 경우<br/>
@@ -538,27 +538,42 @@
                         </div>
 
                         <!-- step4 - 영수증 -->
-                        <div class="const-receipt" style="display: none;">
+                        <div class="step4-radio const-receipt" style="display: none;">
                             <div class="radio-style">
-                                <input type="radio" id="radio-7-1" name="receipt-radio" class="radio big-radio" value="Set1" onchange="showDivRadio('receipt')"/><label for="radio-7-1"></label>
+                                <input type="radio" id="radio-7-1" name="receipt-radio" class="radio big-radio" value="Set1" onchange="showDivRadio('receipt')"/>
+                                <label for="radio-7-1"></label>
                                 자동 슬라이드(일매출, 월매출, 배달매출 추가 가능)
                             </div>
                             <div class="receipt-div" id="div-radio-7-1" style="display: none;">
-                                <img class="basic" src="./img/step4/const-receipt-set1.png" alt="receipt-set1">
+                                <div class="detail-content">
+                                    <div class="receipt-img">
+                                        <img class="basic" src="./img/step4/const-receipt-set1.png" alt="receipt-set1">
+                                    </div>
+                                </div>
                             </div>
                             <div class="radio-style">
-                                <input type="radio" id="radio-7-2" name="receipt-radio" class="radio big-radio" value="Set2" onchange="showDivRadio('receipt')"/><label for="radio-7-2"></label>
+                                <input type="radio" id="radio-7-2" name="receipt-radio" class="radio big-radio" value="Set2" onchange="showDivRadio('receipt')"/>
+                                <label for="radio-7-2"></label>
                                 좌우버튼, 월매출, 배달매출추가가능
                             </div>
                             <div class="receipt-div" id="div-radio-7-2" style="display: none;">
-                                <img class="basic" src="./img/step4/const-receipt-set2.png" alt="receipt-set2">
+                                <div class="detail-content">
+                                    <div class="receipt-img">
+                                        <img class="basic" src="./img/step4/const-receipt-set2.png" alt="receipt-set2">
+                                    </div>
+                                </div>
                             </div>
                             <div class="radio-style">
-                                <input type="radio" id="radio-7-3" name="receipt-radio" class="radio big-radio" value="Set3" onchange="showDivRadio('receipt')"/><label for="radio-7-3"></label>
+                                <input type="radio" id="radio-7-3" name="receipt-radio" class="radio big-radio" value="Set3" onchange="showDivRadio('receipt')"/>
+                                <label for="radio-7-3"></label>
                                 월매출+일매출 모두 노출, 배달매출 추가가능, 페이지네이션
                             </div>
                             <div class="receipt-div" id="div-radio-7-3" style="display: none;">
-                                <img class="basic" src="./img/step4/const-receipt-set3.png" alt="receipt-set3">
+                                <div class="detail-content">
+                                    <div class="receipt-img">
+                                        <img class="basic" src="./img/step4/const-receipt-set3.png" alt="receipt-set3">
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -733,9 +748,9 @@
                         </div>
     
                         <!-- step4 - 유튜브 영상 -->
-                        <div class="const-youtube" style="display: none;">
+                        <div class="step4-radio const-youtube" style="display: none;">
                             <div class="radio-style">
-                                <input type="radio" id="radio-12-1" name="youtube-radio" class="radio big-radio" value="Set1" onchange="showDivRadio('youtube')"/><label for="radio-12-1"></label>
+                                <input type="radio" id="radio-12-1" name="youtube-radio" class="radio big-radio" value="Set1" onchange="showDivRadio('youtube')" checked="true"/><label for="radio-12-1"></label>
                                 미디어<br/>                               
                             </div>
                             <div class="youtube-div" id="div-radio-12-1" style="display: none;">
@@ -757,7 +772,7 @@
                         </div>
     
                         <!-- step4 - 인스타그램 이미지 -->
-                        <div class="const-insta" style="display: none;">
+                        <div class="step4-radio const-insta" style="display: none;">
                             <div class="radio-style">
                                 <input type="radio" id="radio-13-1" name="insta-radio" class="radio big-radio" value="Set1" onchange="showDivRadio('insta')" checked="true"/><label for="radio-13-1"></label>
                                 기본<br/>                               
@@ -777,7 +792,7 @@
                         </div>
     
                         <!-- step4 - 브랜드 소개 -->
-                        <div class="const-brand" style="display: none;">
+                        <div class="step4-radio const-brand" style="display: none;">
                             <div class="radio-style">
                                 <input type="radio" id="radio-14-1" name="brand-radio" class="radio big-radio" value="Set1" onchange="showDivRadio('brand')" checked="true"/><label for="radio-14-1"></label>
                                 기본<br/>                               
