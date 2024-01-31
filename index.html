@@ -53,46 +53,15 @@
                         <div class="select">
                             <p class="select-item">3. 고객에게 강조하고 싶은 이미지를 선택해주세요.</p>
                             <div class="radio-style">
-                                <input type="radio" id="radio-1-1" name="image-radio" class="radio big-radio" value="고객 중심"/><label for="radio-1-1"></label>고객 중심<br/>
-                                <div class="image-div" id="div-radio-1-1">
-                                    <div class="detail-content">
-                                        <p class="basic-text">
-                                            고객 리뷰 영역이 우선적으로 노출될 수 있게 개발됩니다.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <input type="radio" id="radio-1-2" name="image-radio" class="radio big-radio" value="메뉴 중심"/><label for="radio-1-2"></label>메뉴 중심<br/>
-                                <div class="image-div" id="div-radio-1-2">
-                                    <div class="detail-content">
-                                        <p class="basic-text">
-                                            메뉴 혹은 메뉴의 특장점을 우선적으로 노출될 수 있게 개발됩니다. <br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <input type="radio" id="radio-1-3" name="image-radio" class="radio big-radio" value="매출 중심"/><label for="radio-1-3"></label>매출 중심<br/>
-                                <div class="image-div" id="div-radio-1-3">
-                                    <div class="detail-content">
-                                        <p class="basic-text">
-                                            매출 영수증 또는 매출 상승 그래프들을 활용하여 우선적으로 노출될 수 있게 개발됩니다.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <input type="radio" id="radio-1-4" name="image-radio" class="radio big-radio" value="브랜드 중심"/><label for="radio-1-4"></label>브랜드 중심<br/>
-                                <div class="image-div" id="div-radio-1-4">
-                                    <div class="detail-content">
-                                        <p class="basic-text">
-                                            브랜드의 특장점을 우선적으로 노출될 수 있게 개발됩니다.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <input type="radio" id="radio-1-5" name="image-radio" class="radio big-radio" value="혜택 중심"/><label for="radio-1-5"></label>혜택 중심<br/>
-                                <div class="image-div" id="div-radio-1-5">
-                                    <div class="detail-content">
-                                        <p class="basic-text">
-                                            가맹계약을 할 경우 어떤 혜택을 받을 지 우선적으로 노출될 수 있게 개발됩니다.<br>
-                                        </p>
-                                    </div>
-                                </div>
+                                <input type="radio" id="radio-1-1" name="image-radio" class="radio big-radio" value="고객 중심"/><label for="radio-1-1"></label><b>고객 중심</b>고객 리뷰 영역이 우선적으로 노출될 수 있게 개발됩니다.<br/>
+                                
+                                <input type="radio" id="radio-1-2" name="image-radio" class="radio big-radio" value="메뉴 중심"/><label for="radio-1-2"></label><b>메뉴 중심</b>메뉴 혹은 메뉴의 특장점을 우선적으로 노출될 수 있게 개발됩니다.<br/>
+                                
+                                <input type="radio" id="radio-1-3" name="image-radio" class="radio big-radio" value="매출 중심"/><label for="radio-1-3"></label><b>매출 중심</b>매출 영수증 또는 매출 상승 그래프들을 활용하여 우선적으로 노출될 수 있게 개발됩니다.<br/>
+                                
+                                <input type="radio" id="radio-1-4" name="image-radio" class="radio big-radio" value="브랜드 중심"/><label for="radio-1-4"></label><b>브랜드 중심</b>브랜드의 특장점을 우선적으로 노출될 수 있게 개발됩니다.<br/>
+                                
+                                <input type="radio" id="radio-1-5" name="image-radio" class="radio big-radio" value="혜택 중심"/><label for="radio-1-5"></label><b>혜택 중심</b>가맹계약을 할 경우 어떤 혜택을 받을 지 우선적으로 노출될 수 있게 개발됩니다.<br/>       
                             </div>
                         </div>
                         <div class="btn">
@@ -315,25 +284,23 @@
                     <p class="end"></p>
                     <div class="menu-step" id="step4">
                         <div class="select-table">
-                            <table id="const-table" onclick="changeColor(event)">
-                                <tr>
-                                    <td class="clickable-cell clicked">특징</td>
-                                    <td class="clickable-cell">메뉴 소개</td>
-                                    <td class="clickable-cell">영수증</td>
-                                    <td class="clickable-cell">인테리어</td>
-                                    <td class="clickable-cell">후기</td>
-                                    <td class="clickable-cell">상담 신청 폼</td>
-                                    <td class="clickable-cell">가맹절차</td>
-                                </tr>
-                                <tr>
-                                    <td class="clickable-cell optional-td" name="graph-checkbox" id="td-checkbox-2-1" style="display: none;">그래프</td>
-                                    <td class="clickable-cell optional-td" name="youtube-radio" id="td-checkbox-2-2" style="display: none;">유튜브 영상</td>
-                                    <td class="clickable-cell optional-td" name="insta-radio" id="td-checkbox-2-3" style="display: none;">인스타그램 이미지</td>
-                                    <td class="clickable-cell optional-td" name="brand-radio" id="td-checkbox-2-4" style="display: none;">브랜드 소개</td>
-                                    <td class="clickable-cell optional-td" id="td-checkbox-2-5" style="display: none;">창업 비용</td>
-                                    <td style="display: none;"></td>
-                                </tr>
-                            </table>
+                            <div id="const-table" onclick="changeColor(event)">
+                            
+                                <div class="clickable-cell clicked">특징</div>
+                                <div class="clickable-cell">메뉴 소개</div>
+                                <div class="clickable-cell">영수증</div>
+                                <div class="clickable-cell">인테리어</div>
+                                <div class="clickable-cell">후기</div>
+                                <div class="clickable-cell">상담 신청 폼</div>
+                                <div class="clickable-cell">가맹절차</div>
+                                <div class="clickable-cell optional-td" name="graph-checkbox" id="td-checkbox-2-1" style="display: none;">그래프</div>
+                                <div class="clickable-cell optional-td" name="youtube-radio" id="td-checkbox-2-2" style="display: none;">유튜브 영상</div>
+                                <div class="clickable-cell optional-td" name="insta-radio" id="td-checkbox-2-3" style="display: none;">인스타그램 이미지</div>
+                                <div class="clickable-cell optional-td" name="brand-radio" id="td-checkbox-2-4" style="display: none;">브랜드 소개</div>
+                                <div class="clickable-cell optional-td" id="td-checkbox-2-5" style="display: none;">창업 비용</div>
+                                <div style="display: none;"></div>
+                                
+                            </div>
                         </div>
 
                         <!-- step4 - 특징 -->

@@ -210,6 +210,11 @@ label {
 }
 
 /* step1 */
+
+#step1 .radio-style b{
+   display:inline-block; width: 90px;
+}
+
 input::placeholder{
     color: #999;
 }
@@ -340,27 +345,32 @@ input:focus {
 
 /* step4 */
 #step4 .select-table {
-    display: inline-block;
-    border: 1px solid #444;
-    border-radius: 8px;
-    overflow: hidden;
+    display: block;
 	margin-bottom: 2em;
-    background-color: #fff;
 }
 
 #step4 #const-table {
+    display: flex;
+    flex-direction: row;
     border-collapse: collapse;
+    flex-wrap: wrap;
 	text-align: center;
-
+    gap: 10px 14px;
 }
 
-#step4 #const-table td {
-    border-right: 1px solid #444;
-    padding: 20px 40px;
+#step4 #const-table div {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px 30px;
 }
-#step4 #const-table td:last-child{
-    border-right: 0;
+/*
+#step4 #const-table div:first-child{
+    border-radius: 8px 0px 0px 8px;
+    border-left: 1px;
 }
+#step4 #const-table div:last-child{
+    border-radius: 0px 8px 8px 0px;
+}*/
 
 .clickable-cell {
 	cursor: pointer;
@@ -501,11 +511,11 @@ input:focus {
     opacity: 0.9;
 }
 .next-btn.inactive{
-    opacity:0.5;
+    opacity:0.15;
     cursor:default;
 }
 .next-btn.inactive:hover{
-    opacity:0.5;
+    opacity:0.15;
 }
 
 .pre-btn:hover, .next-btn:hover {

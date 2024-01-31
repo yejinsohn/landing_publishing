@@ -256,8 +256,8 @@ function showOptionalTableDiv() {
 // Step4 구성 클릭
 function changeColor(event) {
     const target = event.target;
-
-    if (target.tagName === 'TD' && target.classList.contains('clickable-cell')) {
+    //target.tagName === 'TD' &&  아래에서 뺌
+    if (target.classList.contains('clickable-cell')) {
         const cellContent = target.textContent.trim().toLowerCase();
 
         // 숨기기
