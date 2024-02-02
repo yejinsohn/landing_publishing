@@ -4,7 +4,9 @@ $(document).ready(function () {
     changeMenu(($(".menu-box .menu").index()));
 
     $(".menu-box .menu").click(function () {
-        changeMenu($(this).index()); // 클릭한 메뉴의 index 전달
+        if ($(this).hasClass('able')) {
+            changeMenu($(this).index()); // 클릭한 메뉴의 index 전달
+        }
     });
 
     // text 타입 input과 radio 타입 input이 변화할 때마다 checkInputs 함수 호출
@@ -22,17 +24,12 @@ function changeMenu(index) {
     // 본문 활성화
     $(".form-box .menu-area").hide();
     $(".form-box .menu-area").eq(index).show();
-
+    
     pageIndex = index + 1;
     getInputs(pageIndex);
 }
 
 // 해당 menu에 존재하는 input의 종류를 가져옴.
-// 메뉴가 바뀔때 한번만 호출하면 됨. 트리거: 다음으로 넘어가는 버튼 클릭 or 메뉴 div가 변경되어 호출됐을 때
-// 예외 경우: step4는 기본으로 있는 7가지 사항에 + step3에서 체크한 선택사항의 input만 가져와야 함.
-// 예외 경우: step5는 무조건 하나를 체크해야 하지만, 텍스트 작성을 안하고 다른걸 체크해도 넘어가게 해야함.
-// input을 모두 검출하고 활성화 된놈들만 activate 클래스를 붙이고 값 작성되면 빼는거로?
-// 그리고 activate가 있으면 버튼 비활성화, 없으면 활성화
 function getInputs(index) {
     // 초기화. 모든 input의 activate 클래스 제거.
     $(':input').each(function() {
@@ -69,25 +66,13 @@ function getInputs(index) {
     checkInputs();
 }
 
-// $('input:checkbox[class="checkbox big-checkbox"]:checked') 이 부분에서 클래스명은 정확히 다 써줘야 동작함. 
-// activate가 들어가면 들어간대로 다 써줘야함.
-// 저장해야 할 데이터들
-// step1 : 상호명, 색상조합, 강조이미지
-// step2 : 메인화면 강조부분
-// step3 : 추가영역(직접입력시)
-// step4 : 특징(중복), 메뉴소개, 영수증, 인테리어(유무체크), 후기(중복), 상담신청폼, 가맹절차, 그래프(중복), 유튜브, 인스타, 브랜드소개, 창업비용
-// step5 : 강조폰트(직접입력있음)
-// step6 : 스티키바
-// step7 : 담당자명, 휴대폰번호, 이메일주소
 function checkInputs() {
     // 각 text 타입 input을 확인하며 값이 비어있는지 여부를 확인
     $('#step' + pageIndex + ' .input-box').each(function () {
-        if (!$(this).is(":hidden")) { // step3의 추가사항 같은 입력하지 않아도 되는 숨겨진 텍스트 필드 예외 방지
-            if ($(this).val() === '') { // 아무 값도 없을 때
-                $(this).addClass("activate");
-            } else {
-                $(this).removeClass("activate");
-            }
+        if ($(this).val() === '') { // 아무 값도 없을 때
+            $(this).addClass("activate");
+        } else {
+            $(this).removeClass("activate");
         }
     });
     
@@ -126,11 +111,16 @@ function checkInputs() {
 
     $('#const-table .optional-td').each(function () {
         if ($(this).is(':hidden')) {
-            $("input[name='" + $('#const-table .optional-td').attr('name') + "']").each(function () {
+            $("input[name='" + $(this).attr('name') + "']").each(function () {
                 $(this).removeClass("activate");
             });
         }
     });
+
+    // step3의 추가사항 같은 입력하지 않아도 되는 숨겨진 텍스트 필드 예외
+    $("input:text[name='option']").each(function() {
+        $(this).removeClass("activate");
+    })
 
     $("input:radio[name='menu-radio']").each(function() {
         if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
@@ -162,7 +152,7 @@ function checkInputs() {
         }
     })
 
-    $("input:checkbox[name='feature-checkbox']").each(function() {
+    $("input:checkbox[name='feature-checkbox[]']").each(function() {
         if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
             $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
         }
@@ -174,7 +164,7 @@ function checkInputs() {
         }
     })
 
-    $("input:checkbox[name='review-checkbox']").each(function() {
+    $("input:checkbox[name='review-checkbox[]']").each(function() {
         if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
             $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
         }
@@ -192,7 +182,7 @@ function checkInputs() {
         }
     })
     
-    $("input:checkbox[name='graph-checkbox']").each(function() {
+    $("input:checkbox[name='graph-checkbox[]']").each(function() {
         if ($(this).prop('checked')) { // 하나라도 체크가 되어있으면
             $("input[name='" + $(this).attr('name') + "']").removeClass("activate");
         }
@@ -207,30 +197,14 @@ function checkInputs() {
         if($(this).hasClass("activate") === true) { // activate 클래스가 있다면, 즉 입력 안한 칸이 있다면
             $('.next-btn').attr('onclick', '').unbind('click');
             $(".next-btn").addClass("inactive");
+            $(".menu-box .menu").eq(pageIndex - 1).removeClass("able");
             return false;
         } else {
             $('.next-btn').attr("onclick", "changeMenu(" + pageIndex + ")");
             $(".next-btn").removeClass("inactive");
+            $('.menu-box .menu').eq(pageIndex - 1).addClass('able');
         }
     });
-
-    // if ($('#step' + ($(".menu-box .menu").index() + 1) + ' :input').hasClass("activate") === true) {
-    //     console.log($('#step' + ($(".menu-box .menu").index() + 1) + ' :input').hasClass("activate"));
-    //     $('.next-btn').attr('onclick', '').unbind('click');
-    //     $(".next-btn").addClass("inactive");
-    // } else {
-    //     $('.next-btn').attr("onclick", "changeMenu(" + ($(".menu-box .menu").index() + 1) + ")");
-    //     $(".next-btn").removeClass("inactive");
-    // }
-
-    // 모든 text 타입 input이 채워져 있고, radio 타입 input 중 하나만 체크되어 있으면 버튼 활성화
-    // if ((allTextInputsFilled && oneRadioChecked && oneCheckboxChecked)) {
-    //     $('.next-btn').attr("onclick", "changeMenu(" + ($(".menu-box .menu").index() + 1) + ")");
-    //     $(".next-btn").removeClass("inactive");
-    // } else {
-    //     $('.next-btn').attr('onclick', '').unbind('click');
-    //     $(".next-btn").addClass("inactive");
-    // }
 }
 
 // Step3 구성 선택1 -> 구성 선택2 테이블 출력
@@ -256,8 +230,7 @@ function showOptionalTableDiv() {
 // Step4 구성 클릭
 function changeColor(event) {
     const target = event.target;
-    //target.tagName === 'TD' &&  아래에서 뺌
-    if (target.classList.contains('clickable-cell')) {
+    if (target.tagName === 'DIV' && target.classList.contains('clickable-cell')) {
         const cellContent = target.textContent.trim().toLowerCase();
 
         // 숨기기
@@ -321,7 +294,7 @@ function duplicableCheckbox(childDivType) {
     var checkedbox_array = [];
     $('.' + childDivType + '-div').hide(); // 내용이 들어가있는 div 숨기기.
 
-    $("input[name='" + childDivType + "-checkbox']:checked").each(function () {
+    $("input[name='" + childDivType + "-checkbox[]']:checked").each(function () {
         checkedbox_array.push($(this).attr('id'))
     })
 
@@ -352,7 +325,7 @@ function showDivRadio(checkedRadio) {
     $('#div-' + selectedRadioId).show();
 }
 
-//핸드폰번호 - 자동 입력
+// 핸드폰번호 - 자동 입력
 function oninputPhone(target) {
     target.value = target.value
         .replace(/[^0-9]/g, '')

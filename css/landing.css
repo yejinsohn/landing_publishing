@@ -155,7 +155,6 @@ label {
     font-size: 16px;
     color: #555;
     width: 100%;
-    cursor: pointer;
     flex-direction: column;
     gap: 0;
 }
@@ -174,7 +173,10 @@ label {
     box-sizing: border-box;
     transition: 0.2s;
 }
-.menu:hover {
+.menu-box .able {
+    cursor: pointer;
+}
+.menu-box .able:hover {
     background-color:#d9eef1;
     color: #555;
 }
@@ -210,11 +212,9 @@ label {
 }
 
 /* step1 */
-
 #step1 .radio-style b{
    display:inline-block; width: 90px;
 }
-
 input::placeholder{
     color: #999;
 }
@@ -228,7 +228,6 @@ input::placeholder{
     border-radius: 8px;
     outline:none;
 }
-
 input:focus {
     box-shadow: 0 0 0 2px #0CB2C9 inset;
 }
@@ -272,8 +271,6 @@ input:focus {
     justify-content: space-between;
 	margin-left: 10px;
 }
-
-
 .Reference-button {
     color: #333;
     font-weight: 600;
@@ -295,7 +292,6 @@ input:focus {
     align-items: flex-start;
     gap: 10px;
 }
-
 .main-div .main-div-img .basic {
     max-width: 60%;
 }
@@ -336,8 +332,6 @@ input:focus {
     border: 1px solid #ddd;	
     background-color: #fff;
 }
-
-
 #step3 .comment {
 	font-weight: medium;
 	color: #f83131;
@@ -348,7 +342,6 @@ input:focus {
     display: block;
 	margin-bottom: 2em;
 }
-
 #step4 #const-table {
     display: flex;
     flex-direction: row;
@@ -357,7 +350,6 @@ input:focus {
 	text-align: center;
     gap: 10px 14px;
 }
-
 #step4 #const-table div {
     border: 1px solid #444;
     border-radius: 8px;
@@ -388,7 +380,6 @@ input:focus {
 .clicked:hover {
     background-color: black;
 }
-
 #step4 .const-img {
 	margin-top: 30px;
     max-width: 60%;
@@ -524,7 +515,6 @@ input:focus {
 .pre-btn:hover{
     background: #f7f7f7;
 }
-
 .submit-btn {
     display: inline-flex;
     padding: 20px 50px;
