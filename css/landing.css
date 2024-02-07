@@ -27,6 +27,39 @@ section {
     box-shadow: 2px 0px 8px rgba(0,0,0,0.04);
     z-index: 9;
 }
+
+.contact{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    transform: translateY(-50%);
+    padding: 20px;
+    gap: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.contact p{
+    display: inline-block;
+    font-weight: 700;
+    color: #505050;
+}
+.contact a{
+    color: #767676;
+    text-decoration: none;
+    padding: 5px 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+.contact a:hover{
+    background: #f4f4f4;
+    color: #505050;
+}
+
 .cont {
     min-width: 800px;
     width: 100%; 
@@ -188,6 +221,26 @@ label {
 	font-weight: normal;
 	font-size: 16px;
 }
+.form-box .menu-step.center{
+    padding: 3em 1em;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    line-height: 26px;
+    color: #505050;
+    border-radius: 12px;
+    background-color: #fff;
+    font-size: 18px;
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+.form-box .menu-step.center .contact {
+    display: block;
+    position: relative;
+    transform: none;
+}
+
 .form-box .intro {
     display: flex;
     justify-content: left;
@@ -201,6 +254,11 @@ label {
     border-radius: 10px;
 	margin: 30px auto 40px;
     box-sizing: border-box;
+}
+
+.form-box .intro.center{
+    justify-content: center;
+    text-align: center;
 }
 .form-box .menu-step .select {
     margin-bottom: 2.5em;
@@ -497,6 +555,7 @@ input:focus {
     font-weight: 600;
     background: #222;
     border: none;
+    font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
     opacity: 0.9;
@@ -518,15 +577,24 @@ input:focus {
 .submit-btn {
     display: inline-flex;
     padding: 20px 50px;
-    color: #fff;
-    background: #0CB2C9;
-    border: none;
     font-weight: 600;
+    border: none;
+    font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s;
-    font-size:1em;
+    opacity: 0.9;
+    color: #fff;
+    background: #0CB2C9;
 }
 .submit-btn:hover{
-    background: #00a1b7
+    opacity: 1;
+}
+
+.submit-btn.inactive{
+    opacity: 0.3;
+    cursor: default;
+}
+.submit-btn.inactive:hover{
+    background: #0CB2C9;
+    opacity: 0.3;
 }

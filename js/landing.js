@@ -40,7 +40,7 @@ function getInputs(index) {
     $('#step' + index + ' :input').each(function() {
         // 예외 경우: step3, 6은 선택사항 체크 안해도 다음으로 넘어갈 수 있음.
         // 예외 경우: step3은 추가영역의 텍스트를 작성 안해도 가능하게 해야함.
-        if (index != 3 && index != 4 && index != 6) {
+        if (index != 3 && index != 4 && index != 6 && index != 8) {
             $(this).addClass("activate");
         }
     })
